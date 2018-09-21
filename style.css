@@ -1,5 +1,6 @@
 html {
     text-align: center;
+    font-family: sans-serif;
 }
 
 img {
@@ -7,10 +8,24 @@ img {
     height: 50%;
 }
 
+
+div {
+    display: inline;
+    border-style: solid;
+    width: 50%;
+    padding: 2px 3%;
+}
+
+
+#bio, #resume {
+    text-decoration: none;
+    color: black;
+}
+
 #bio {
-    margin-right: 5%;
+    padding-right: 5%;
 }
 
 #resume {
-    margin-left: 5%;
+    padding-left: 5%;
 }
