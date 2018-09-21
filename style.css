@@ -1,0 +1,16 @@
+html {
+    text-align: center;
+}
+
+img {
+    width: 50%;
+    height: 50%;
+}
+
+#bio {
+    margin-right: 5%;
+}
+
+#resume {
+    margin-left: 5%;
+}
