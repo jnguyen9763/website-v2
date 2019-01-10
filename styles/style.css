@@ -1,0 +1,9 @@
+@font-face {
+    font-family: Audrey;
+    src: url('../fonts/Audrey/Audrey-Normal.otf');
+}
+html, body {
+    background-color: black;
+    color: #FFB6C1;
+    font-family: Audrey, sans-serif;
+}
