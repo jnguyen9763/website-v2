@@ -1,13 +1,14 @@
-var img;
-
+var img, numPetals;
 var petals = [];
+
+numPetals = 50;
 
 function setup() {
     angleMode(DEGREES);
     imageMode(CENTER);
     createCanvas($(window).width(), $(window).height() - 20);
     img = loadImage('../images/petal.png');
-    for (var i = 0; i < 50; i++) {
+    for (var i = 0; i < numPetals; i++) {
         petals[i] = new Petal();
     }
 }
@@ -41,7 +42,7 @@ function windowResized() {
 }
 
 function Petal() {
-    //this.rotation = random(360);
+    this.rotation = random(360);
     this.lenX = random(15, 20);
     this.lenY = this.lenX / 2;
     this.posX = random(width);
@@ -84,7 +85,10 @@ function Petal() {
     }
 
     this.show = function() {
-        //rotate(this.rotation);
-        image(img, this.posX, this.posY, this.lenX, this.lenY);
+        push();
+        translate(this.posX, this.posY);
+        rotate(this.rotation);
+        image(img, 0, 0, this.lenX, this.lenY);
+        pop();
     }
 }
