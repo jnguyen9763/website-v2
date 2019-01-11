@@ -13,13 +13,31 @@ function setup() {
 }
 
 function draw() {
-    //x = Math.random() * window.innerWidth;
-    //y = Math.random() * window.innerHeight;
     background('black');
     for (var i = 0; i < petals.length; i++) {
-        petals[i].show();
-        petals[i].fall();
+        if (petals[i].falling == true) {
+            petals[i].fall();
+            petals[i].show();
+        }
+        else {
+            petals[i].jump();
+            petals[i].show();
+        }
     }
+}
+
+function mouseClicked() {
+    console.log(mouseX, mouseY);
+    for (var i = 0; i < petals.length; i++) {
+        if ((mouseX < petals[i].posX + 5 && mouseX > petals[i].posX - 5)  && (mouseY < petals[i].posY + 5 && mouseY > petals[i].posY - 5)) {
+            console.log('Yes!');
+            petals[i].falling = false;
+        }
+    }
+}
+
+function windowResized() {
+  resizeCanvas($(window).width(), $(window).height() - 20);
 }
 
 function Petal() {
@@ -30,6 +48,23 @@ function Petal() {
     this.posY = random(-500, -50);
     this.speedX = random(-2, 2);
     this.speedY = random(1, 2);
+    this.falling = true;
+
+    this.jump = function() {
+        this.speedY = random(1, 2);
+        this.posY -= this.speedY;
+
+        if (this.posY < height - 50) {
+            this.falling = true;
+        }
+
+        if (this.posX < 5) {
+            this.posX = width - 5;
+        }
+        if (this.posX > width - 5) {
+            this.posX = 5;
+        }
+    }
 
     this.fall = function() {
         this.posX += this.speedX;
@@ -40,8 +75,11 @@ function Petal() {
             this.speedY = 0;
         }
 
-        if (this.posX < 5 || this.posX > width - 5) {
-            this.speedX *= -1;
+        if (this.posX < 5) {
+            this.posX = width - 5;
+        }
+        if (this.posX > width - 5) {
+            this.posX = 5;
         }
     }
 
