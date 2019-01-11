@@ -1,8 +1,12 @@
-var img, numPetals, heightFloor;
+var img, numPetals, heightFloor, tolerance, windToler, rotatToler, rotatDiff;
 var petals = [];
 
-numPetals = 50;
+numPetals = 1;
 heightFloor = 10;
+tolerance = 5;
+windToler = 50;
+rotateToler = 15;
+rotateDiff = 3;
 
 function setup() {
     angleMode(DEGREES);
@@ -17,22 +21,18 @@ function setup() {
 function draw() {
     background('black');
     for (var i = 0; i < petals.length; i++) {
-        if (petals[i].falling == true) {
+        if (mouseIsPressed && (mouseX < petals[i].posX + windToler && mouseX > petals[i].posX - windToler)  && (mouseY < petals[i].posY + windToler && mouseY > petals[i].posY - windToler)) {
+            if (petals[i].state == "stop") {
+                petals[i].state = "fly";
+            }
+            if (petals[i].state == "fly") {
+                petals[i].fly();
+            }
+        }
+        if (petals[i].state == "fall" || !mouseIsPressed) {
             petals[i].fall();
-            petals[i].show();
         }
-        else {
-            petals[i].jump();
-            petals[i].show();
-        }
-    }
-}
-
-function mouseClicked() {
-    for (var i = 0; i < petals.length; i++) {
-        if ((mouseX < petals[i].posX + 5 && mouseX > petals[i].posX - 5)  && (mouseY < petals[i].posY + 5 && mouseY > petals[i].posY - 5)) {
-            petals[i].falling = false;
-        }
+        petals[i].show();
     }
 }
 
@@ -49,26 +49,19 @@ function Petal() {
     this.posY = random(-500, -50);
     this.speedX = random(-2, 2);
     this.speedY = random(1, 2);
-    this.falling = true;
+    this.state = "fall";
     this.turn_left = random([true, false]);
     this.rotate = true;
     this.change = false;
 
     // NEED TO REDO THIS
-    this.jump = function() {
-        this.speedY = random(1, 2);
+    this.fly = function() {
+        //this.speedX = mouseX - this.posX
+        //this.speedY = mouseY - this.posY;
+        this.speedX = 5;
+        this.speedY = 5;
+        this.posX -= this.speedX;
         this.posY -= this.speedY;
-
-        if (this.posY < height - heightFloor) {
-            this.falling = true;
-        }
-
-        if (this.posX < 5) {
-            this.posX = width - 5;
-        }
-        if (this.posX > width - 5) {
-            this.posX = 5;
-        }
     }
 
     this.fall = function() {
@@ -79,13 +72,14 @@ function Petal() {
             this.speedX = 0;
             this.speedY = 0;
             this.rotate = false;
+            this.state = "stop";
         }
 
-        if (this.posX < 5) {
-            this.posX = width - 5;
+        if (this.posX < tolerance) {
+            this.posX = width - tolerance;
         }
-        if (this.posX > width - 5) {
-            this.posX = 5;
+        if (this.posX > width - tolerance) {
+            this.posX = tolerance;
         }
     }
 
@@ -97,7 +91,7 @@ function Petal() {
         pop();
 
         if (this.rotate) {
-            if (abs(this.OGrotation - this.rotation) < 15 || this.change) {
+            if (abs(this.OGrotation - this.rotation) < rotateToler || this.change) {
                 if (this.change) {
                     if (this.turn) {
                         this.turn = false;
@@ -109,10 +103,10 @@ function Petal() {
                 }
 
                 if (this.turn) {
-                    this.rotation += random(0, 3);
+                    this.rotation += random(0, rotateDiff);
                 }
                 else {
-                    this.rotation -= random(0, 3);
+                    this.rotation -= random(0, rotateDiff);
                 }
             }
             else {
