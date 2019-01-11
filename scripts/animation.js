@@ -1,4 +1,4 @@
-var img, numPetals, heightFloor, tolerance, windToler, rotatToler, rotatDiff;
+var img, numPetals, heightFloor, tolerance, windToler, rotatToler, rotatDiff, stdDist;
 var petals = [];
 
 numPetals = 1;
@@ -7,6 +7,7 @@ tolerance = 5;
 windToler = 50;
 rotateToler = 15;
 rotateDiff = 3;
+stdDist = 50;
 
 function setup() {
     angleMode(DEGREES);
@@ -21,16 +22,17 @@ function setup() {
 function draw() {
     background('black');
     for (var i = 0; i < petals.length; i++) {
-        if (mouseIsPressed && (mouseX < petals[i].posX + windToler && mouseX > petals[i].posX - windToler)  && (mouseY < petals[i].posY + windToler && mouseY > petals[i].posY - windToler)) {
+        if (petals[i].state != "fall" && mouseIsPressed && (mouseX < petals[i].posX + windToler && mouseX > petals[i].posX - windToler)  && (mouseY < petals[i].posY + windToler && mouseY > petals[i].posY - windToler)) {
+            petals[i].computeSpeed();
             if (petals[i].state == "stop") {
                 petals[i].state = "fly";
             }
-            if (petals[i].state == "fly") {
-                petals[i].fly();
-            }
         }
-        if (petals[i].state == "fall" || !mouseIsPressed) {
+        if (petals[i].state == "fall") {
             petals[i].fall();
+        }
+        if (petals[i].state == "fly") {
+            petals[i].fly();
         }
         petals[i].show();
     }
@@ -54,14 +56,36 @@ function Petal() {
     this.rotate = true;
     this.change = false;
 
-    // NEED TO REDO THIS
+    this.computeSpeed = function() {
+        var distance = abs(dist(mouseX, mouseY, this.posX, this.posY));
+        var factor = (stdDist - distance) / distance;
+        this.speedX = (abs(mouseX - this.posX) * factor) / stdDist;
+        this.speedY = (abs(mouseY - this.posY) * factor) / stdDist;
+
+        if (mouseX < this.posX) {
+            this.speedX *= -1;
+        }
+        if (mouseY < this.posY) {
+            if (this.posY > height - heightFloor) {
+                this.speedY = 0;
+            }
+            else {
+                this.speedY *= -1;
+            }
+        }
+    }
+
     this.fly = function() {
-        //this.speedX = mouseX - this.posX
-        //this.speedY = mouseY - this.posY;
-        this.speedX = 5;
-        this.speedY = 5;
+        this.rotate = true;
         this.posX -= this.speedX;
         this.posY -= this.speedY;
+
+        if (this.posX < tolerance) {
+            this.posX = width - tolerance;
+        }
+        if (this.posX > width - tolerance) {
+            this.posX = tolerance;
+        }
     }
 
     this.fall = function() {
