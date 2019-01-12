@@ -4,7 +4,7 @@ var petals = [];
 numPetals = 50;
 heightFloor = 10;
 tolerance = 5;
-//mouseToler = 10;
+mouseToler = 10;
 rotateToler = 15;
 rotateDiff = 3;
 
@@ -36,7 +36,7 @@ function draw() {
         petals[i].show();
     }
 }
-/*
+
 function mousePressed() {
     for (var i = 0; i < petals.length; i++) {
         if ((mouseX < petals[i].posX + mouseToler && mouseX > petals[i].posX - mouseToler)  && (mouseY < petals[i].posY + mouseToler && mouseY > petals[i].posY - mouseToler)) {
@@ -64,7 +64,7 @@ function mouseDragged() {
         }
     }
 }
-*/
+
 function windowResized() {
   resizeCanvas(document.body.clientWidth, document.body.clientHeight);
 }
@@ -81,8 +81,8 @@ function Petal() {
     this.turn_left = random([true, false]);
     this.rotate = true;
     this.change = false;
-    //this.follow = false;
-    /*
+    this.follow = false;
+
     this.computeSpeed = function() {
         this.speedX = random(-0.5, 0.5);
         this.speedY = random(0.5, 1);
@@ -95,7 +95,7 @@ function Petal() {
         this.posX = mouseX;
         this.posY = mouseY;
     }
-    */
+
     this.fall = function() {
         this.posX += this.speedX;
         this.posY += this.speedY;
