@@ -17,6 +17,10 @@ body {
     height: 10vh;
 }
 
+nav {
+    height: 14vh;
+}
+
 nav a {
     font-family: 'Montserrat', sans-serif;
     letter-spacing: 3px;
