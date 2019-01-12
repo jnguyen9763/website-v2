@@ -65,6 +65,10 @@ body {
     font-family: 'Audrey', sans-serif;
 }
 
+#front a {
+    bottom: 0;
+}
+
 canvas {
     position: absolute;
     display: block;
