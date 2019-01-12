@@ -1,13 +1,12 @@
-var img, numPetals, heightFloor, tolerance, windToler, rotatToler, rotatDiff, stdDist;
+var img, numPetals, heightFloor, tolerance, mouseToler, rotatToler, rotatDiff;
 var petals = [];
 
-numPetals = 1;
+numPetals = 50;
 heightFloor = 10;
 tolerance = 5;
-windToler = 50;
+mouseToler = 10;
 rotateToler = 15;
 rotateDiff = 3;
-stdDist = 50;
 
 function setup() {
     angleMode(DEGREES);
@@ -22,19 +21,47 @@ function setup() {
 function draw() {
     background('black');
     for (var i = 0; i < petals.length; i++) {
-        if (petals[i].state != "fall" && mouseIsPressed && (mouseX < petals[i].posX + windToler && mouseX > petals[i].posX - windToler)  && (mouseY < petals[i].posY + windToler && mouseY > petals[i].posY - windToler)) {
-            petals[i].computeSpeed();
-            if (petals[i].state == "stop") {
-                petals[i].state = "fly";
-            }
+        if (petals[i].posX < tolerance) {
+            petals[i].posX = width - tolerance;
         }
-        if (petals[i].state == "fall") {
-            petals[i].fall();
+        if (petals[i].posX > width - tolerance) {
+            petals[i].posX = tolerance;
         }
-        if (petals[i].state == "fly") {
-            petals[i].fly();
+        if (petals[i].posY > height - heightFloor) {
+                petals[i].speedX = 0;
+                petals[i].speedY = 0;
+                petals[i].rotate = false;
         }
+        petals[i].fall();
         petals[i].show();
+    }
+}
+
+function mousePressed() {
+    for (var i = 0; i < petals.length; i++) {
+        if ((mouseX < petals[i].posX + mouseToler && mouseX > petals[i].posX - mouseToler)  && (mouseY < petals[i].posY + mouseToler && mouseY > petals[i].posY - mouseToler)) {
+            petals[i].follow = true;
+        }
+    }
+}
+
+function mouseReleased() {
+    for (var i = 0; i < petals.length; i++) {
+        if (petals[i].follow == true) {
+            petals[i].follow = false;
+            petals[i].computeSpeed();
+        }
+    }
+}
+
+function mouseDragged() {
+    for (var i = 0; i < petals.length; i++) {
+        if ((mouseX < petals[i].posX + mouseToler && mouseX > petals[i].posX - mouseToler)  && (mouseY < petals[i].posY + mouseToler && mouseY > petals[i].posY - mouseToler)) {
+            petals[i].follow = true;
+        }
+        if (petals[i].follow == true) {
+            petals[i].followMouse();
+        }
     }
 }
 
@@ -51,60 +78,27 @@ function Petal() {
     this.posY = random(-500, -50);
     this.speedX = random(-2, 2);
     this.speedY = random(1, 2);
-    this.state = "fall";
     this.turn_left = random([true, false]);
     this.rotate = true;
     this.change = false;
+    this.follow = false;
 
     this.computeSpeed = function() {
-        var distance = abs(dist(mouseX, mouseY, this.posX, this.posY));
-        var factor = (stdDist - distance) / distance;
-        this.speedX = (abs(mouseX - this.posX) * factor) / stdDist;
-        this.speedY = (abs(mouseY - this.posY) * factor) / stdDist;
-
-        if (mouseX < this.posX) {
-            this.speedX *= -1;
-        }
-        if (mouseY < this.posY) {
-            if (this.posY > height - heightFloor) {
-                this.speedY = 0;
-            }
-            else {
-                this.speedY *= -1;
-            }
-        }
+        this.speedX = random(-0.5, 0.5);
+        this.speedY = random(0.5, 1);
     }
 
-    this.fly = function() {
+    this.followMouse = function() {
         this.rotate = true;
-        this.posX -= this.speedX;
-        this.posY -= this.speedY;
-
-        if (this.posX < tolerance) {
-            this.posX = width - tolerance;
-        }
-        if (this.posX > width - tolerance) {
-            this.posX = tolerance;
-        }
+        this.speedX = 0;
+        this.speedY = 0;
+        this.posX = mouseX;
+        this.posY = mouseY;
     }
 
     this.fall = function() {
         this.posX += this.speedX;
         this.posY += this.speedY;
-
-        if (this.posY > height - heightFloor) {
-            this.speedX = 0;
-            this.speedY = 0;
-            this.rotate = false;
-            this.state = "stop";
-        }
-
-        if (this.posX < tolerance) {
-            this.posX = width - tolerance;
-        }
-        if (this.posX > width - tolerance) {
-            this.posX = tolerance;
-        }
     }
 
     this.show = function() {
