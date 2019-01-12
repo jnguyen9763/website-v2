@@ -32,9 +32,6 @@ body {
 
 #front a {
     letter-spacing: 1px;
-}
-
-#front a {
     text-decoration: none;
 }
 
@@ -67,6 +64,10 @@ body {
 
 #front a {
     bottom: 0;
+}
+
+#about, #experience, #projects {
+    height: 100vh;
 }
 
 canvas {
