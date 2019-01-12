@@ -40,4 +40,13 @@ $(document).ready(function() {
             $('nav').fadeTo(400, 0);
         }
     });
+    $('nav').mouseDown(function() {
+        if (!at_top && $('nav').css('opacity') == 0) {
+            $('nav').fadeTo(400, 1);
+        }
+    }).mouseUp(function() {
+        if (!at_top && $('nav').css('opacity') == 1) {
+            $('nav').fadeTo(400, 0);
+        }
+    });
 });
