@@ -52,12 +52,15 @@ nav a {
     bottom: 0;
 }
 
-#front {
+#front, #about {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+}
+
+#front {
     flex-direction: column;
+    height: 100vh;
 }
 
 #front h1 {
@@ -74,12 +77,21 @@ nav a {
 
 #about {
     font-family: 'Montserrat', sans-serif;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    min-height: 100vh;
 }
 
-#about img {
-    transform: scale(0.5);
+#propic {
+    transform: scale(0.75);
     box-shadow: -2px 2px 0 5px black, -7px 7px 0 1px #ffb6c1;
+}
+
+#info {
+    margin: 3%;
+}
+
+#info p {
+    text-align: center;
 }
 
 canvas {
@@ -92,18 +104,28 @@ canvas {
 
 #skills {
     border: 1px solid #ffb6c1;
-    width: 15vw;
+    width: 25vw;
 }
 
 #skills hr {
-    width: 10vw;
+    width: 75%;
 }
 
-#skills p {
+#skills p, #info p {
     margin: 1em auto;
 }
 
 hr {
     margin: 0em auto;
     background-color: white;
+}
+
+@media (max-width: 768px) {
+    #about {
+        flex-direction: column;
+    }
+
+    #skills {
+        width: 40vw;
+    }
 }
