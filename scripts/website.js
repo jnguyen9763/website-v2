@@ -16,12 +16,13 @@ $(document).ready(function() {
     });
     $(window).scroll(function (event) {
         var scroll = $(window).scrollTop();
-        if (scroll > prevScroll && !scroll < 100) { // down
+        if (scroll > prevScroll && scroll >= 100) { // down
             $('nav').fadeOut();
             $('#front a').fadeOut();
         }
         else { // up
             $('nav').fadeIn();
+            $('#front a').fadeIn();
         }
         /*
         if (scroll < 100) {
