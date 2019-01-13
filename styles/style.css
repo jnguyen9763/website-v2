@@ -123,9 +123,14 @@ hr {
 @media (max-width: 768px) {
     #about {
         flex-direction: column;
+        margin: 10% auto;
     }
 
     #skills {
         width: 40vw;
+    }
+
+    #info {
+        margin: 10% 3%;
     }
 }
