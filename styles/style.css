@@ -1,3 +1,19 @@
+/*
+@media (max-width: 768px) {
+    #about {
+      flex-direction: column;
+    }
+/*
+    #about div {
+        height: auto;
+    }
+
+    #about div h1 {
+        text-align: center;
+    }
+}
+*/
+
 @font-face {
     font-family: Audrey;
     src: url('../fonts/Audrey/Audrey-Normal.otf');
@@ -30,13 +46,8 @@ nav a {
     font-weight: bold;
 }
 
-.nav-link, .nav-link:hover, .nav-link:active, #front a, #front a:hover, #front a:active {
+.nav-link, .nav-link:hover, .nav-link:active, #front a, #front a:hover, #front a:active, #links a, #links a:hover, #links a:active {
     color: white;
-}
-
-#front a {
-    letter-spacing: 1px;
-    text-decoration: none;
 }
 
 .custom-toggler {
@@ -52,11 +63,32 @@ nav a {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
-#front {
-    height: 100vh;
+#links {
+    left: 0;
+    bottom: 0;
+}
+
+/*
+#front, #about, #about div {
     display: flex;
-    align-items: center;
     justify-content: center;
+}
+
+#front, #about {
+    align-items: center;
+}
+
+#front, #about div {
+    height: 100vh;
+    flex-direction: column;
+}
+*/
+
+#front {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     flex-direction: column;
 }
 
@@ -67,17 +99,36 @@ nav a {
 }
 
 #front a {
+    letter-spacing: 1px;
+    text-decoration: none;
     bottom: 0;
 }
 
-#about, #experience, #projects {
+#about {
+    height: 100vh;
+}
+/*
+#about, #projects, #contact {
     height: 100vh;
 }
 
+#about {
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 1px;
+}
+
+#selfie img {
+    border-radius: 50%;
+}
+*/
 canvas {
     position: absolute;
     display: block;
     top: 0;
     left: 0;
     z-index: -1;
+}
+
+hr {
+    background-color: white;
 }
