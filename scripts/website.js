@@ -17,18 +17,18 @@ $(document).ready(function() {
     $(window).scroll(function (event) {
         var scroll = $(window).scrollTop();
         if (scroll > prevScroll && scroll >= 100) { // down
-            if ($('nav').css('display') != 'none') {
+            if ($('nav').css('display') != 'none' && $('nav').css('opacity') == 1) {
                 $('nav').fadeOut();
             }
-            if ($('#front a').css('display') != 'none') {
+            if ($('#front a').css('display') != 'none' && $('#front a').css('opacity') == 1) {
                 $('#front a').fadeOut();
             }
         }
         else { // up
-            if ($('nav').css('display') == 'none') {
+            if ($('nav').css('display') == 'none' && $('nav').css('opacity') == 1) {
                 $('nav').fadeIn();
             }
-            if ($('#front a').css('display') == 'none') {
+            if ($('#front a').css('display') == 'none' && $('#front a').css('opacity') == 1) {
                 $('#front a').fadeIn();
             }
         }
