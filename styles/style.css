@@ -56,10 +56,10 @@ nav a {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 #front {
-    flex-direction: column;
     height: 100vh;
 }
 
@@ -81,13 +81,17 @@ nav a {
     min-height: 100vh;
 }
 
-#propic {
-    transform: scale(0.75);
+#propic img {
+    transform: scale(0.5);
     box-shadow: -2px 2px 0 5px black, -7px 7px 0 1px #ffb6c1;
 }
 
+#info, #skills {
+    margin-bottom: 10vh;
+}
+
 #info {
-    margin: 3%;
+    width: 50vw;
 }
 
 #info p {
@@ -104,33 +108,30 @@ canvas {
 
 #skills {
     border: 1px solid #ffb6c1;
-    width: 25vw;
+    padding: 1%;
 }
 
-#skills hr {
-    width: 75%;
+#skills img {
+    height: 48px;
+    width: 48px;
 }
 
-#skills p, #info p {
-    margin: 1em auto;
-}
-
-hr {
-    margin: 0em auto;
-    background-color: white;
+.pink {
+    color: #ffb6c1;
 }
 
 @media (max-width: 768px) {
-    #about {
-        flex-direction: column;
-        margin: 10% auto;
-    }
-
-    #skills {
-        width: 40vw;
-    }
-
     #info {
-        margin: 10% 3%;
+        width: 90vw;
+    }
+}
+
+@media (min-width: 768px) {
+    #propic {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 }
