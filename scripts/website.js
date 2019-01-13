@@ -16,6 +16,14 @@ $(document).ready(function() {
     });
     $(window).scroll(function (event) {
         var scroll = $(window).scrollTop();
+        if (scroll > prevScroll && !scroll < 100) { // down
+            $('nav').fadeOut();
+            $('#front a').fadeOut();
+        }
+        else { // up
+            $('nav').fadeIn();
+        }
+        /*
         if (scroll < 100) {
             $('nav').fadeIn();
             $('#front a').fadeIn();
@@ -29,6 +37,7 @@ $(document).ready(function() {
             }
             $('#front a').fadeOut();
         }
+        */
         prevScroll = scroll;
     });
 });
