@@ -17,28 +17,21 @@ $(document).ready(function() {
     $(window).scroll(function (event) {
         var scroll = $(window).scrollTop();
         if (scroll > prevScroll && scroll >= 100) { // down
-            $('nav').fadeOut();
-            $('#front a').fadeOut();
-        }
-        else { // up
-            $('nav').fadeIn();
-            $('#front a').fadeIn();
-        }
-        /*
-        if (scroll < 100) {
-            $('nav').fadeIn();
-            $('#front a').fadeIn();
-        }
-        else {
-            if (scroll > prevScroll) {
+            if ($('nav').css('display') != 'none') {
                 $('nav').fadeOut();
             }
-            else {
+            if ($('#front a').css('display') != 'none') {
+                $('#front a').fadeOut();
+            }
+        }
+        else { // up
+            if ($('nav').css('display') == 'none') {
                 $('nav').fadeIn();
             }
-            $('#front a').fadeOut();
+            if ($('#front a').css('display') == 'none') {
+                $('#front a').fadeIn();
+            }
         }
-        */
         prevScroll = scroll;
     });
 });
