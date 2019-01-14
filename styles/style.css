@@ -120,6 +120,14 @@ canvas {
     color: #ffb6c1;
 }
 
+.hidden {
+    opacity: 0;
+}
+
+#projects {
+    height: 100vh;
+}
+
 @media (max-width: 768px) {
     #info {
         width: 90vw;
