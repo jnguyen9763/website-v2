@@ -81,6 +81,11 @@ nav a {
     letter-spacing: 2px;
     min-height: 100vh;
 }
+/*
+#propic {
+    position: relative;
+}
+*/
 
 #propic img {
     transform: scale(0.5);
@@ -103,12 +108,19 @@ nav a {
     text-align: center;
 }
 
-canvas {
+#petals canvas {
     position: absolute;
     display: block;
     top: 0;
     left: 0;
     z-index: -1;
+}
+
+#propic canvas {
+    position: absolute;
+    display: block;
+    top: 100vh;
+    z-index: 1;
 }
 
 #skills {

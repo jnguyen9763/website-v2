@@ -45,20 +45,10 @@ $(document).ready(function() {
             }
         }
         prevScroll = scroll;
-        /*
-        if (isScrolledIntoView($('#propic'))) {
-            $('html, body').animate({
-                scrollTop: $('#info').offset().top
-            }, 800);
-        }
-        */
+
         if (isScrolledIntoView($('#info'))) {
             $('#info h2').fadeTo('slow', 1).siblings('div').delay(1000).fadeTo('slow', 1);
             $('#skills').delay(2000).fadeTo('slow', 1);
-            /*
-            $('#info h2').fadeIn().siblings('div').delay(1000).fadeIn();
-            $('#skills').delay(2000).fadeIn();
-            */
         }
     });
 });
