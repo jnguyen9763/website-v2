@@ -46,11 +46,12 @@ $(document).ready(function() {
             }
         }
         prevScroll = scroll;
-
+        /*
         if (!loadedFlower && isScrolledIntoView($('#propic'))) {
+            console.log('test');
             var bloomingFlowers = new p5(blooming, 'propic');
             loadedFlower = true;
-        }
+        }*/
         if (isScrolledIntoView($('#info'))) {
             $('#info h2').fadeTo('slow', 1).siblings('div').delay(1000).fadeTo('slow', 1);
             $('#skills').delay(2000).fadeTo('slow', 1);
