@@ -1,4 +1,5 @@
 //NOTE: commented out code is for another animation, where user can drag around petals and release them after, disabled for now
+var flower;
 
 var fallingPetals = new p5(function(sketch) {
     var img, numPetals, heightFloor, tolerance, mouseToler, rotatToler, rotatDiff;
@@ -17,6 +18,7 @@ var fallingPetals = new p5(function(sketch) {
         sketch.imageMode(sketch.CENTER);
         var canvas = sketch.createCanvas(document.body.clientWidth, document.body.clientHeight);
         img = sketch.loadImage('../images/petal.png');
+        flower = sketch.loadImage('../images/flower-petal.png');
         // Prepare all petals and sets each 'fell' state to false
         for (var i = 0; i < numPetals; i++) {
             petals[i] = new Petal();
@@ -159,18 +161,15 @@ var fallingPetals = new p5(function(sketch) {
     }
 }, 'petals');
 
-var bloomingFlowers = new p5(function(sketch) {
-    var img, x, y, size, angles, pos;
-
-    sketch.preload = function() {
-        img = sketch.loadImage('../images/flower-petal.png');
-    }
+function blooming(sketch) {
+    var x, y, size, angles, pos;
 
     sketch.setup = function() {
         sketch.angleMode(sketch.DEGREES);
         sketch.imageMode(sketch.CENTER);
         sketch.ellipseMode(sketch.CENTER);
         sketch.createCanvas($('#propic').width(), $('#propic').height());
+        img = flower; // avoids preloading
         x = sketch.width - ((sketch.width - sketch.width / 2) / 2);
         y = (sketch.height - $('#propic img').height() / 2) / 2;
         size = $('#propic img').width() / 30;
@@ -198,4 +197,4 @@ var bloomingFlowers = new p5(function(sketch) {
     sketch.windowResized = function() {
       sketch.resizeCanvas($('#propic').width(), $('#propic').height());
     }
-}, 'propic');
+}

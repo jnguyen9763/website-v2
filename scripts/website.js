@@ -1,4 +1,5 @@
 var prevScroll = 0;
+var loadedFlower = false;
 
 // source: Scott Dowding from StackOverflow
 function isScrolledIntoView(elem)
@@ -46,6 +47,10 @@ $(document).ready(function() {
         }
         prevScroll = scroll;
 
+        if (!loadedFlower && isScrolledIntoView($('#propic'))) {
+            var bloomingFlowers = new p5(blooming, 'propic');
+            loadedFlower = true;
+        }
         if (isScrolledIntoView($('#info'))) {
             $('#info h2').fadeTo('slow', 1).siblings('div').delay(1000).fadeTo('slow', 1);
             $('#skills').delay(2000).fadeTo('slow', 1);
