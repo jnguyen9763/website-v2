@@ -22,7 +22,7 @@ nav {
 }
 
 nav a {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'News Cycle', sans-serif;
     letter-spacing: 3px;
 }
 
@@ -70,13 +70,14 @@ nav a {
 }
 
 #front a {
+    font-family: 'News Cycle';
     letter-spacing: 1px;
     text-decoration: none;
     bottom: 0;
 }
 
 #about {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'News Cycle', sans-serif;
     letter-spacing: 2px;
     min-height: 100vh;
 }
@@ -92,6 +93,10 @@ nav a {
 
 #info {
     width: 50vw;
+}
+
+#info h2 {
+    letter-spacing: 5px;
 }
 
 #info p {
