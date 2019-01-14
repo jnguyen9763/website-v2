@@ -25,7 +25,7 @@ var fallingPetals = new p5(function(sketch) {
     }
 
     sketch.draw = function() {
-        sketch.noLoop();
+        //sketch.noLoop();
         sketch.background('black');
         for (var i = 0; i < petals.length; i++) {
             // If petals hit edge of the screen, will continue onto other edge
