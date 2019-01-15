@@ -152,7 +152,8 @@ nav a {
 }
 
 #submit {
-    float: right;
+    display: block;
+    margin: 0 auto;
 }
 
 .text, .text:focus {
