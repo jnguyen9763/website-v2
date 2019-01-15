@@ -85,13 +85,31 @@
                 <img src="/images/socket-io.svg" alt="socket.io">
             </div>
         </div>
+        <!--
         <div id="projects">
             <h1>projects</h1>
         </div>
-        <!--
+        -->
         <div id="contact">
-            <h1>contact</h1>
-        </div>-->
+            <div>
+                <h4 class="text-center">send me a note</h4>
+                <form action="mailto:jacqueline.nguyen@tufts.edu" method="post" enctype="text/plain">
+                    <div class="form-group">
+                        <label for="email">email address</label>
+                        <input type="email" class="text form-control form-control-sm" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">subject</label>
+                        <input type="text" class="text form-control form-control-sm" id="subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">message</label>
+                        <div class="textarea text form-control form-control-sm" id="message" contenteditable="true"></div>
+                    </div>
+                    <input type="submit" value="send" id="submit" class="btn btn-sample">
+                </form>
+            </div>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>

@@ -52,7 +52,7 @@ nav a {
     bottom: 0;
 }
 
-#front, #about {
+#front, #about, #contact {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,7 +70,7 @@ nav a {
 }
 
 #front a {
-    font-family: 'News Cycle';
+    font-family: 'News Cycle', sans-serif;
     letter-spacing: 1px;
     text-decoration: none;
     bottom: 0;
@@ -96,7 +96,7 @@ nav a {
     margin-bottom: 10vh;
 }
 
-#info {
+#info, #contact > div {
     width: 50vw;
 }
 
@@ -123,7 +123,7 @@ nav a {
     z-index: 1;
 }
 
-#skills {
+#skills, #contact > div {
     border: 1px solid #ffb6c1;
     padding: 1%;
 }
@@ -145,8 +145,31 @@ nav a {
     height: 100vh;
 }
 
+#contact {
+    font-family: 'News Cycle', sans-serif;
+    letter-spacing: 3px;
+    min-height: 100vh;
+}
+
+#submit {
+    float: right;
+}
+
+.text, .text:focus {
+    background: black;
+    border: none;
+    border-bottom: 1px solid white !important;
+    border-radius: 0;
+    color: white;
+}
+
+#message {
+    min-height: 1em;
+    height: auto;
+}
+
 @media (max-width: 768px) {
-    #info {
+    #info, #contact > div {
         width: 90vw;
     }
 }
@@ -159,4 +182,52 @@ nav a {
         align-items: center;
         flex-direction: column;
     }
+}
+
+.btn-sample {
+  color: #FFB6C1;
+  background-color: #000000;
+}
+
+.btn-sample:hover,
+.btn-sample:focus,
+.btn-sample:active,
+.btn-sample.active,
+.open .dropdown-toggle.btn-sample {
+  color: #FFFFFF;
+  background-color: #FFB6C1;
+}
+
+.btn-sample:active,
+.btn-sample.active,
+.open .dropdown-toggle.btn-sample {
+  background-image: none;
+}
+
+.btn-sample.disabled,
+.btn-sample[disabled],
+fieldset[disabled] .btn-sample,
+.btn-sample.disabled:hover,
+.btn-sample[disabled]:hover,
+fieldset[disabled] .btn-sample:hover,
+.btn-sample.disabled:focus,
+.btn-sample[disabled]:focus,
+fieldset[disabled] .btn-sample:focus,
+.btn-sample.disabled:active,
+.btn-sample[disabled]:active,
+fieldset[disabled] .btn-sample:active,
+.btn-sample.disabled.active,
+.btn-sample[disabled].active,
+fieldset[disabled] .btn-sample.active {
+  background-color: #000000;
+}
+
+.btn-sample .badge {
+  color: #000000;
+  background-color: #FFB6C1;
+}
+
+*:active, *:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
 }
