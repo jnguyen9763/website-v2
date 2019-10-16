@@ -109,6 +109,11 @@ nav a {
     border-radius: 50%;
 }
 
+#intro img {
+    height: 32px;
+    width: 32px;
+}
+
 #info h2, #info h3 {
     display: inline-block;
 }
