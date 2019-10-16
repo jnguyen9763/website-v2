@@ -178,3 +178,62 @@ hr {
 .pink {
     color: #ffb6c1;
 }
+
+.skillbox {
+    width: 50%; /* Full width */
+    background-color: black; /* Grey background */
+    display: inline-block;
+    border: white 1px solid;
+    z-index: 1;
+}
+
+.skills {
+    padding-top: 5px; /* Add top padding */
+    padding-bottom: 5px; /* Add bottom padding */
+}
+
+.c {
+    width: 80%;
+    background-color: white;
+}
+
+.java {
+    width: 60%;
+    background-color: white;
+}
+
+.html {
+    width: 100%;
+    background-color: white;
+}
+
+.css {
+    width: 60%;
+    background-color: white;
+}
+
+.javascript {
+    width: 40%;
+    background-color: white;
+}
+
+.git {
+    width: 80%;
+    background-color: white;
+}
+
+.github {
+    width: 100%;
+    background-color: white;
+}
+
+.heroku {
+    width: 100%;
+    background-color: white;
+}
+
+.firebase {
+    width: 40%;
+    background-color: white;
+}
+
