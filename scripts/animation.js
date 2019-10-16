@@ -3,7 +3,7 @@ var fallingPetals = new p5(function(sketch) {
     var petals = []; // Holds Petal objects
     var fell = []; // Keeps track of each petal object's location
 
-    numPetals = 50;
+    numPetals = 150;
     heightFloor = 10;
     tolerance = 5;
     rotateToler = 15;
@@ -58,7 +58,7 @@ var fallingPetals = new p5(function(sketch) {
         this.lenY = this.lenX / 2;
         // position of petal (off screen initially)
         this.posX = sketch.random(sketch.width);
-        this.posY = sketch.random(-500, -50);
+        this.posY = sketch.random(-500, -25);
         // speed of petals (direction of petal)
         this.speedX = sketch.random(-2, 2);
         this.speedY = sketch.random(1, 2);
