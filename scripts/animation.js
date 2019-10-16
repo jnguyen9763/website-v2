@@ -1,4 +1,3 @@
-//NOTE: commented out code is for another animation, where user can drag around petals and release them after, disabled for now
 var fallingPetals = new p5(function(sketch) {
     var img, numPetals, heightFloor, tolerance, mouseToler, rotatToler, rotatDiff;
     var petals = []; // Holds Petal objects
@@ -7,7 +6,6 @@ var fallingPetals = new p5(function(sketch) {
     numPetals = 50;
     heightFloor = 10;
     tolerance = 5;
-    //mouseToler = 10;
     rotateToler = 15;
     rotateDiff = 3;
 
@@ -16,7 +14,6 @@ var fallingPetals = new p5(function(sketch) {
         sketch.imageMode(sketch.CENTER);
         sketch.createCanvas(document.body.clientWidth, document.body.clientHeight);
         img = sketch.loadImage('../images/petal.png');
-        //flower = sketch.loadImage('../images/flower-petal.png');
         // Prepare all petals and sets each 'fell' state to false
         for (var i = 0; i < numPetals; i++) {
             petals[i] = new Petal();
@@ -25,7 +22,6 @@ var fallingPetals = new p5(function(sketch) {
     }
 
     sketch.draw = function() {
-        //sketch.noLoop();
         sketch.background('black');
         for (var i = 0; i < petals.length; i++) {
             // If petals hit edge of the screen, will continue onto other edge
@@ -39,13 +35,7 @@ var fallingPetals = new p5(function(sketch) {
             if (petals[i].posY > sketch.height) {
                 fell[i] = true;
             }
-            /*
-            if (petals[i].posY > height - heightFloor) {
-                    petals[i].speedX = 0;
-                    petals[i].speedY = 0;
-                    petals[i].rotate = false;
-            }
-            */
+            
             petals[i].fall();
             petals[i].show();
         }
@@ -54,35 +44,7 @@ var fallingPetals = new p5(function(sketch) {
             sketch.remove();
         }
     }
-    /*
-    function mousePressed() {
-        for (var i = 0; i < petals.length; i++) {
-            if ((mouseX < petals[i].posX + mouseToler && mouseX > petals[i].posX - mouseToler)  && (mouseY < petals[i].posY + mouseToler && mouseY > petals[i].posY - mouseToler)) {
-                petals[i].follow = true;
-            }
-        }
-    }
-
-    function mouseReleased() {
-        for (var i = 0; i < petals.length; i++) {
-            if (petals[i].follow == true) {
-                petals[i].follow = false;
-                petals[i].computeSpeed();
-            }
-        }
-    }
-
-    function mouseDragged() {
-        for (var i = 0; i < petals.length; i++) {
-            if ((mouseX < petals[i].posX + mouseToler && mouseX > petals[i].posX - mouseToler)  && (mouseY < petals[i].posY + mouseToler && mouseY > petals[i].posY - mouseToler)) {
-                petals[i].follow = true;
-            }
-            if (petals[i].follow == true) {
-                petals[i].followMouse();
-            }
-        }
-    }
-    */
+    
     sketch.windowResized = function() {
       sketch.resizeCanvas(document.body.clientWidth, document.body.clientHeight);
     }
@@ -104,21 +66,7 @@ var fallingPetals = new p5(function(sketch) {
         this.turn = sketch.random([true, false]);
         this.rotate = true;
         this.change = false;
-        //this.follow = false;
-        /*
-        this.computeSpeed = function() {
-            this.speedX = random(-0.5, 0.5);
-            this.speedY = random(0.5, 1);
-        }
-
-        this.followMouse = function() {
-            this.rotate = true;
-            this.speedX = 0;
-            this.speedY = 0;
-            this.posX = mouseX;
-            this.posY = mouseY;
-        }
-        */
+        
         this.fall = function() {
             this.posX += this.speedX;
             this.posY += this.speedY;
@@ -158,42 +106,3 @@ var fallingPetals = new p5(function(sketch) {
         }
     }
 }, 'petals');
-/*
-var blooming = new p5(function(sketch) {
-    var x, y, size, angles, pos;
-
-    sketch.setup = function() {
-        sketch.angleMode(sketch.DEGREES);
-        sketch.imageMode(sketch.CENTER);
-        sketch.ellipseMode(sketch.CENTER);
-        sketch.createCanvas($('#propic').width(), $('#propic').height());
-        //img = flower; // avoids preloading
-        x = sketch.width - ((sketch.width - sketch.width / 2) / 2);
-        y = (sketch.height - $('#propic img').height() / 2) / 2;
-        size = $('#propic img').width() / 30;
-        angles = [0, 45, 90, 135, 180, 225, 270, 315];
-        pos = [[x, y - size], [x + size * 0.75, y - size * 0.75], [x + size, y], [x + size * 0.75, y + size * 0.75], [x, y + size], [x - size * 0.75, y + size * 0.75], [x - size, y], [x - size * 0.75, y - size * 0.75]];
-    }
-
-    sketch.draw = function() {
-        //sketch.rect(sketch.width / 2, sketch.height / 2, $('#propic img').width() / 2, $('#propic img').height() / 2);
-        for (var i = 0; i < pos.length; i++) {
-            sketch.push();
-            sketch.translate(pos[i][0], pos[i][1]);
-            sketch.rotate(angles[i]);
-            sketch.image(img, 0, 0, size * 0.8, size * 1.5);
-            sketch.pop();
-        }
-
-        sketch.noStroke();
-        sketch.fill('#fdfd96');
-        sketch.ellipse(x, y, size, size);
-
-        sketch.noLoop();
-    }
-
-    sketch.windowResized = function() {
-      sketch.resizeCanvas($('#propic').width(), $('#propic').height());
-    }
-}, 'propic');
-*/

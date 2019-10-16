@@ -30,31 +30,36 @@ $(document).ready(function() {
     $(window).scroll(function (event) {
         var scroll = $(window).scrollTop();
         if (scroll > prevScroll && scroll >= 100) { // down
-            if ($('nav').css('display') != 'none' && $('nav').css('opacity') == 1) {
-                $('nav').fadeOut();
-            }
+            // if ($('nav').css('display') != 'none' && $('nav').css('opacity') == 1) {
+            //     $('nav').fadeOut();
+            // }
             if ($('#front a').css('display') != 'none' && $('#front a').css('opacity') == 1) {
                 $('#front a').fadeOut();
             }
         }
         else { // up
-            if ($('nav').css('display') == 'none' && $('nav').css('opacity') == 1) {
-                $('nav').fadeIn();
-            }
+            // if ($('nav').css('display') == 'none' && $('nav').css('opacity') == 1) {
+            //     $('nav').fadeIn();
+            // }
             if ($('#front a').css('display') == 'none' && $('#front a').css('opacity') == 1) {
                 $('#front a').fadeIn();
             }
         }
         prevScroll = scroll;
-        /*
-        if (!loadedFlower && isScrolledIntoView($('#propic'))) {
-            console.log('test');
-            var bloomingFlowers = new p5(blooming, 'propic');
-            loadedFlower = true;
-        }*/
-        if (isScrolledIntoView($('#info'))) {
-            $('#info h2').fadeTo('slow', 1).siblings('div').delay(1000).fadeTo('slow', 1);
-            $('#skills').delay(2000).fadeTo('slow', 1);
+        if (isScrolledIntoView($('#headshot'))) {
+            $('#animation').removeClass('paused');
         }
+    });
+    $('#showi').on('click', function() {
+        $('#skills').hide();
+        $('#shows').removeClass('active');
+        $('#intro').show();
+        $('#showi').addClass('active');
+    });
+    $('#shows').on('click', function() {
+        $('#intro').hide();
+        $('#showi').removeClass('active');
+        $('#skills').show();
+        $('#shows').addClass('active');
     });
 });

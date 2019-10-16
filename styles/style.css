@@ -52,15 +52,15 @@ nav a {
     bottom: 0;
 }
 
-#front, #about, #contact {
+#front, #about, #projects, #contact {
+    height: 100vh;
+}
+
+#front {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-#front {
-    height: 100vh;
 }
 
 #front h1 {
@@ -76,36 +76,20 @@ nav a {
     bottom: 0;
 }
 
-#about {
-    font-family: 'News Cycle', sans-serif;
-    letter-spacing: 2px;
-    min-height: 100vh;
-}
-/*
-#propic {
-    position: relative;
-}
-*/
-
-#propic img {
-    transform: scale(0.5);
-    box-shadow: -2px 2px 0 5px black, -7px 7px 0 1px #ffb6c1;
-}
-
-#info, #skills {
-    margin-bottom: 10vh;
-}
-
-#info, #contact > div {
-    width: 50vw;
-}
-
-#info h2 {
-    letter-spacing: 5px;
-}
-
-#info p {
+#info button {
+    letter-spacing: 3px;
+    color: white;
+    width: 100px;
+    display: inline-block;
     text-align: center;
+}
+
+#info button:hover {
+    font-weight: bold;
+}
+
+.active {
+    text-decoration: underline;
 }
 
 #petals canvas {
@@ -116,121 +100,76 @@ nav a {
     z-index: -1;
 }
 
-#propic canvas {
-    position: absolute;
-    display: block;
-    top: 100vh;
-    z-index: 1;
+*:active, *:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
 }
 
-#skills, #contact > div {
-    border: 1px solid #ffb6c1;
-    padding: 1%;
+#headshot, #info img {
+    border-radius: 50%;
 }
 
-#skills img {
-    height: 48px;
-    width: 48px;
+#info h2, #info h3 {
+    display: inline-block;
+}
+
+#info h2 {
+    margin-left: 10px;
+}
+
+.text {
+    position:relative;
+    line-height:2em;
+    overflow:hidden;
+}
+
+.fadingEffect {
+    position:absolute;
+    top:0; bottom:0; right:0;
+    width:100%;
+    background: black;
+    -moz-animation: showHide 1s ease-in forwards; /* Firefox */
+    -webkit-animation: showHide 1s ease-in forwards; /* Safari and Chrome */
+    -ms-animation: showHide 1s ease-in forwards; /* IE10 */
+    -o-animation: showHide 1s ease-in forwards; /* Opera */
+    animation: showHide 1s ease-in forwards;
+}
+
+.paused {
+    -webkit-animation: paused;
+    -moz-animation: paused;
+    -o-animation: paused; 
+    animation: paused;
+}
+
+@-webkit-keyframes showHide { /* Chrome, Safari */
+    0% {width:100%;}
+    100% {width:0%;}
+}
+@-moz-keyframes showHide { /* FF */
+    0% {width:100%;}
+    100% {width:0%;}
+}
+@-ms-keyframes showHide { /* IE10 */
+    0% {width:100%;}
+    100% {width:0%;}
+}
+@-o-keyframes showHide { /* Opera */
+    0% {width:100%;}
+    100% {width:0%;}
+}
+@keyframes showHide {
+    0% {width:100%;}
+    100% {width:0%;}
+}
+
+hr {
+    width: 100%; 
+    color: white; 
+    height: 1px; 
+    background-color:white;
 }
 
 .pink {
     color: #ffb6c1;
-}
-
-.hidden {
-    opacity: 0;
-}
-
-#projects {
-    height: 100vh;
-}
-
-#contact {
-    font-family: 'News Cycle', sans-serif;
-    letter-spacing: 3px;
-    height: 100vh;
-}
-
-#submit {
-    display: block;
-    margin: 0 auto;
-}
-
-.text, .text:focus {
-    background: black;
-    border: none;
-    border-bottom: 1px solid white !important;
-    border-radius: 0;
-    color: white;
-    margin-top: 3%;
-    margin-bottom: 3%;
-}
-
-#message {
-    min-height: 1em;
-    height: auto;
-}
-
-@media (max-width: 768px) {
-    #info, #contact > div {
-        width: 90vw;
-    }
-}
-
-@media (min-width: 768px) {
-    #propic {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-}
-
-.btn-sample {
-  color: #FFB6C1;
-  background-color: #000000;
-}
-
-.btn-sample:hover,
-.btn-sample:focus,
-.btn-sample:active,
-.btn-sample.active,
-.open .dropdown-toggle.btn-sample {
-  color: #FFFFFF;
-  background-color: #FFB6C1;
-}
-
-.btn-sample:active,
-.btn-sample.active,
-.open .dropdown-toggle.btn-sample {
-  background-image: none;
-}
-
-.btn-sample.disabled,
-.btn-sample[disabled],
-fieldset[disabled] .btn-sample,
-.btn-sample.disabled:hover,
-.btn-sample[disabled]:hover,
-fieldset[disabled] .btn-sample:hover,
-.btn-sample.disabled:focus,
-.btn-sample[disabled]:focus,
-fieldset[disabled] .btn-sample:focus,
-.btn-sample.disabled:active,
-.btn-sample[disabled]:active,
-fieldset[disabled] .btn-sample:active,
-.btn-sample.disabled.active,
-.btn-sample[disabled].active,
-fieldset[disabled] .btn-sample.active {
-  background-color: #000000;
-}
-
-.btn-sample .badge {
-  color: #000000;
-  background-color: #FFB6C1;
-}
-
-*:active, *:focus {
-    box-shadow: none !important;
-    outline: 0px !important;
 }

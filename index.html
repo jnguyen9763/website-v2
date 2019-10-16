@@ -10,7 +10,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=News+Cycle" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="/styles/style.css" type="text/css">
 </head>
@@ -19,7 +19,7 @@
         <div class="collapse navbar-collapse navbar-toggle order-1 order-md-0">
             <div class="navbar-nav ml-auto text-center">
                 <a class="nav-item nav-link underline" href="#about">about</a>
-                <a class="nav-item nav-link" href="progress.html">projects</a>
+                <a class="nav-item nav-link" href="#projects">projects</a>
             </div>
         </div>
 
@@ -54,52 +54,53 @@
             </a>
 
         </div>
-        <div id="about">
-            <div id="propic">
-                <img src="/images/profile.jpg" alt="pro-pic" class="img-fluid">
-            </div>
-            <div id="info">
-                <h2 class="text-center font-weight-bold pink hidden">Hello.</h2>
-                <div class="hidden">
-                    <h4>My name is <span class="font-weight-bold">Jacqueline Nguyen</span>. I'm currently studying <span class="font-weight-bold">computer science</span> at <span class="font-weight-bold">Tufts University</span> (Class of 2021).</h4>
-                    <p class="my-4"><img src="/images/rose.png" alt="rose"><img src="/images/rose.png" alt="rose"><img src="/images/rose.png" alt="rose"></p>
-                    <h4><span class="font-weight-bold font-italic pink">from:</span> boston, ma</h4>
-                    <h4><span class="font-weight-bold font-italic pink">fun fact:</span> favorite icecream is cookie dough</h4>
-                    <h4><span class="font-weight-bold font-italic pink">goal:</span> make the world a better place with the power of technology</h4>
+        <div id="about" class="d-flex align-items-center">
+            <div class="row">
+                <div class="col-lg-5 mr-auto">
+                    <img id="headshot" src="/images/headshot.jpg" class="img-fluid left" alt="headshot">
+                </div>
+                <div id="info" class="col-lg-6">
+                    <div class="d-flex justify-content-center"><button id="showi" class="btn active">info</button><button id="shows" class="btn">skills</button></div>
+                    <br>
+                    <div id="intro">
+                        <h1>Hello.  <img src="/images/emoji_18.gif" alt="emoji"></h1>
+                        <h1>I'm <span class="text">Jacqueline.<div id="animation" class="fadingEffect paused"></div></span></h1>
+                        <hr>
+                        <div><h3 class="pink">from</h3><h2>Boston, Massachusetts</h2></div>
+                        <div><h3 class="pink">at</h3><h2>Tufts University</h2></div>
+                        <div><h3 class="pink">studying</h3><h2>Computer Science</h2></div>
+                        <div><h3 class="pink">class of</h3><h2>2021</h2></div>
+                    </div>
+                    <div id="skills" style="display: none">
+                        <div class="row">
+                            <div class="col text-center">
+                                <h3 class="font-weight-bold">LANGUAGES</h3>
+                                <h4>C</h4>
+                                <h4>C++</h4>
+                                <h4>Java</h4>
+                                <h4>HTML</h4>
+                                <h4>CSS</h4>
+                                <h4>Javascript</h4>
+                            </div>
+                            <div class="col text-center">
+                                <h3 class="font-weight-bold">TOOLS</h3>
+                                <h4>Git</h4>
+                                <h4>Github</h4>
+                                <h4>Heroku</h4>
+                                <h4>Firebase</h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div id="skills" class="text-center hidden">
-                <p>technologies i've worked with</p>
-                <img src="/images/c++.svg" alt="C++">
-                <img src="/images/html.svg" alt="HTML">
-                <img src="/images/css.svg" alt="CSS">
-                <img src="/images/javascript.svg" alt="JavaScript">
-                <img src="/images/java.svg" alt="Java">
-                <img src="/images/python.svg" alt="Python">
-                <img src="/images/git.svg" alt="Git">
-                <img src="/images/heroku.svg" alt="Heroku">
-                <img src="/images/bootstrap.svg" alt="Bootstrap">
-                <img src="/images/nodejs.svg" alt="Node.js">
-                <img src="/images/mongodb.svg" alt="MongoDB">
-                <img src="/images/firebase.svg" alt="Firebase">
-                <img src="/images/socket-io.svg" alt="socket.io">
-            </div>
         </div>
-        <!--
+        
         <div id="projects">
-            <h1>projects</h1>
+
         </div>
-        -->
+       
         <div id="contact">
-            <div>
-                <h4 class="text-center">get in touch</h4>
-                <form action="https://formspree.io/jacqueline.nguyen@tufts.edu" method="post">
-                    <input type="email" class="text form-control form-control-sm" id="email" name="_reply" placeholder="email">
-                    <input type="text" class="text form-control form-control-sm" id="subject" name="subject" placeholder="subject">
-                    <textarea class="text form-control form-control-sm" id="message" name="message" placeholder="message" rows="5"></textarea>
-                    <input type="submit" value="send note" id="submit" class="btn btn-sample">
-                </form>
-            </div>
+            
         </div>
     </div>
 
