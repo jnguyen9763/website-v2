@@ -203,7 +203,7 @@ hr {
 }
 
 .html {
-    width: 100%;
+    width: 80%;
     background-color: white;
 }
 
@@ -223,12 +223,12 @@ hr {
 }
 
 .github {
-    width: 100%;
+    width: 80%;
     background-color: white;
 }
 
 .heroku {
-    width: 100%;
+    width: 80%;
     background-color: white;
 }
 
@@ -237,3 +237,6 @@ hr {
     background-color: white;
 }
 
+.card-body {
+    color: black;
+}
