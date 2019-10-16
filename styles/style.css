@@ -240,3 +240,33 @@ hr {
 .card-body {
     color: black;
 }
+
+#contact a {
+    display: block;
+    padding: 20px 40px;
+    color: white;
+    text-decoration: none;
+    border: white 2px solid;
+    border-radius: 15px;
+    transition: all .2s ease-in-out;
+}
+
+#contact a:hover {
+    transform: scale(1.1);
+}
+
+svg {
+    position: relative;
+    transition: 0.5s all;
+}
+
+.fly {
+    transform: translate(10px, -10px);
+}
+
+#about, #projects, #contact {
+    font-family: 'News Cycle', sans-serif;
+    letter-spacing: 2px;
+}
+
+

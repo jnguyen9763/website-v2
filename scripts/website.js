@@ -62,4 +62,10 @@ $(document).ready(function() {
         $('#skills').show();
         $('#shows').addClass('active');
     });
+    $('#contact h1').hover(function() {
+        $('svg').addClass('fly');
+    }, function() {
+        $('svg').removeClass('fly');
+    });
+    $('img').popover();
 });
