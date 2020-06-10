@@ -1,6 +1,6 @@
 @font-face {
 	font-family: Audrey;
-	src: url('../assets/fonts/Audrey/Audrey-Normal.otf');
+	src: url('assets/fonts/Audrey/Audrey-Normal.otf');
 	font-display: swap;
 }
 /* default */
