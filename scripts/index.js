@@ -55,6 +55,8 @@ function checkNavbar() {
 	const closedNavbar = document.querySelector('#closed-nav');
 	const openNavbar = document.querySelector('#open-nav');
 	const mobileNavbar = document.querySelector('#mobile-nav');
+	const mql = window.matchMedia('(max-width: 575.98px)');
+	if (!mql.matches) openNavbar.style.height = '0';
 	if (window.pageYOffset >= sticky) {
 		navbar.classList.add('sticky');
 		navbar.style.backgroundColor = 'transparent';
@@ -79,8 +81,6 @@ function checkNavbar() {
 		});
 		mobileNavbar.classList.remove('filter-black');
 	}
-	const mql = window.matchMedia('(max-width: 575.98px)');
-	if (!mql.matches) openNavbar.style.height = '0';
 }
 
 function openNav() {

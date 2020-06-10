@@ -490,6 +490,17 @@ nav {
 	#logo img {
 		height: 3rem;
 	}
+	#closed-nav div {
+		width: 75%;
+	}
+}
+@media (max-width: 550px) {
+	#mobile-nav {
+		display: block;
+	}
+	#closed-nav div div {
+		display: none;
+	}
 }
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
@@ -498,12 +509,6 @@ nav {
 	}
 	#name-animation h1 {
 		font-size: 6rem;
-	}
-	#mobile-nav {
-		display: block;
-	}
-	#closed-nav div div {
-		display: none;
 	}
 	#description div div {
 		flex-direction: column;
@@ -541,9 +546,6 @@ nav {
 @media (max-height: 375px) {
 	#contact {
 		height: 200%;
-	}
-	#open-nav {
-		flex-direction: row;
 	}
 }
 @media (min-height: 850px) {
