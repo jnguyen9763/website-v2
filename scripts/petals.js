@@ -11,7 +11,9 @@ function petalsAnimation() {
 	const flower = new Image();
 	let stopAnimation = false;
 	// constants
-	const NUM_PETALS = 75;
+	const NUM_PETALS = window.matchMedia('(max-width: 767.98px)').matches
+		? 25
+		: 75;
 	const TOLERANCE = 5;
 	const ROTATE_TOLER = 20;
 	const ROTATE_DIFF = 3;
