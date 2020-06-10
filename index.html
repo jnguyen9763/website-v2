@@ -1,166 +1,363 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, shrink-to-fit=no">
-    <meta name="author" content="Jacqueline Nguyen">
-    <meta name="description" content="Jacqueline Nguyen is a student at Tufts University (Class of 2021) studying Computer Science. Eager to acquire leadership skills and experience in a professional workplace. Fast-learner, hardworking, and excited to make a difference with technology.">
-    <title>Jacqueline Nguyen</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="/scripts/website.js" type="text/javascript"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/addons/p5.dom.js"></script>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="/styles/style.css" type="text/css">
-</head>
-<body>
-    <nav class="navbar navbar-expand-md fixed-top">
-        <div class="collapse navbar-collapse navbar-toggle order-1 order-md-0">
-            <div class="navbar-nav ml-auto text-center">
-                <a class="nav-item nav-link underline" href="#about">about</a>
-                <a class="nav-item nav-link" href="#projects">projects</a>
-            </div>
-        </div>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1, shrink-to-fit=no"
+		/>
+		<meta name="author" content="Jacqueline Nguyen" />
+		<meta
+			name="description"
+			content="Jacqueline Nguyen is a student at Tufts University (Class of 2021) studying Computer Science. Eager to acquire leadership skills and experience in a professional workplace. Fast-learner, hardworking, and excited to make a difference with technology."
+		/>
+		<title>Jacqueline Nguyen</title>
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<link
+			rel="preload"
+			href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap"
+			as="style"
+		/>
+		<link rel="preload" href="style.css" as="style" />
+		<link
+			href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<canvas></canvas>
+		<div id="top">
+			<div id="name-animation">
+				<h1 id="first-init">J</h1>
+				<h1 id="first-name" class="hidden">ACQUELINE</h1>
+				<h1 id="last-name">N<span>.</span></h1>
+			</div>
+			<a href="#about"
+				>Get to know me.
+				<p>
+					<img src="/assets/images/website/down-arrow.svg" alt="down arrow" />
+				</p>
+			</a>
+		</div>
 
-        <a class="navbar-brand mx-auto order-md-1" href="/">
-            <img id="logo" height="10vh" src="/images/logo.png" alt="logo">
-        </a>
-        <button class="navbar-toggler custom-toggler position-absolute" type="button" data-toggle="collapse" data-target=".navbar-toggle" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"><span>
-        </button>
+		<nav>
+			<div id="closed-nav">
+				<div>
+					<div>
+						<a href="#about">about</a>
+						<a href="#projects">projects</a>
+					</div>
+					<a id="logo" href="/">
+						<img src="/assets/images/website/logo.png" alt="logo" />
+					</a>
+					<div>
+						<a href="#contact">contact</a>
+						<a
+							href="/assets/files/Jacqueline-Nguyen-resume.pdf"
+							target="_blank"
+							rel="noopener noreferrer"
+							>resume</a
+						>
+					</div>
+				</div>
+				<a id="mobile-nav" href="javascript:void(0);" onclick="openNav()">
+					<img src="/assets/images/website/hamburger.svg" alt="navigation" />
+				</a>
+			</div>
+			<div id="open-nav">
+				<a href="#about">about</a>
+				<a href="#projects">projects</a>
+				<a href="#contact">contact</a>
+				<a
+					href="/assets/files/Jacqueline-Nguyen-resume.pdf"
+					target="_blank"
+					rel="noopener noreferrer"
+					>resume</a
+				>
+			</div>
+		</nav>
 
-        <div class="collapse navbar-collapse navbar-toggle order-2 order-md-2">
-            <div class="navbar-nav mr-auto text-center">
-                <a class="nav-item nav-link" href="#contact">contact</a>
-                <a class="nav-item nav-link" href="/files/resume.pdf" target="_blank">resume</a>
-            </div>
-        </div>
-    </nav>
+		<div id="about">
+			<div id="description">
+				<div>
+					<h2>About</h2>
+					<p>Hello, my name is Jacqueline Nguyen!</p>
+					<p>
+						I am a Boston native, currently studying Computer Science at Tufts
+						University (Class of 2021). Right now, I am extremely interested in
+						web development, especially the full-stack path.
+					</p>
+					<p>
+						This upcoming fall (2020), I will be a front-end software
+						engineering intern at HubSpot. I've also had experience as a
+						teaching assistant at Tufts for our web development and data
+						structures courses.
+					</p>
+					<p>Here are some things I've worked with:</p>
+					<div>
+						<ul>
+							<li>HTML & CSS</li>
+							<li>JavaScript (ES6)</li>
+							<li>Node.js</li>
+							<li>React</li>
+						</ul>
+						<ul>
+							<li>Java</li>
+							<li>C++</li>
+							<li>Git & GitHub</li>
+							<li>Heroku</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="headshot">
+				<img
+					class="lazyload"
+					data-src="/assets/images/website/headshot.jpg"
+					alt="headshot"
+				/>
+			</div>
+		</div>
 
-    <div id="links" class="position-fixed">
-        <a href="mailto:jacqueline.nguyen@tufts.edu" target="_blank"><span class="far fa-envelope fa-lg mx-1"></span></a>
-        <a href="https://github.com/jnguyen9763" target="_blank"><span class="fab fa-github fa-lg mx-1"></span></a>
-        <a href="https://www.linkedin.com/in/jacqueline-nguyen-73625813b/" target="_blank"><span class="fab fa-linkedin-in fa-lg mx-1"></span></a>
-    </div>
-
-    <div id="petals"></div>
-
-    <div class="container">
-        <div id="front">
-            <h1 class="collapse">JACQUELINE N.</h1>
-            <a class="collapse position-absolute mx-auto" href="#about">Get to know me.
-                <p class="text-center"><img src="/images/down-arrow.png" alt="down arrow"></p>
-            </a>
-
-        </div>
-        <div id="about" class="d-flex align-items-center">
-            <div class="row">
-                <div class="col-lg-5 mr-auto">
-                    <img id="headshot" src="/images/headshot.jpg" class="img-fluid left" alt="headshot">
-                </div>
-                <div id="info" class="col-lg-6">
-                    <div class="d-flex justify-content-center"><button id="showi" class="btn active">info</button><button id="shows" class="btn">skills</button></div>
-                    <br>
-                    <div id="intro">
-                        <h1>Hello.  <img src="/images/emoji_18.gif" alt="emoji"></h1>
-                        <h1>I'm <span class="text">Jacqueline.<div id="animation" class="fadingEffect paused"></div></span></h1>
-                        <hr>
-                        <div><h3 class="pink">from</h3><h2>Boston, Massachusetts</h2></div>
-                        <div><h3 class="pink">at</h3><h2>Tufts University</h2></div>
-                        <div><h3 class="pink">studying</h3><h2>Computer Science</h2></div>
-                        <div><h3 class="pink">class of</h3><h2>2021</h2></div>
-                    </div>
-                    <div id="skills" style="display: none">
-                        <div class="row">
-                            <div class="col">
-                                <h3>Languages</h3>
-                                <hr>
-                                <div class="d-flex align-items-center"><img data-content="C++" rel="popover" data-placement="left" data-trigger="hover" src="https://img.icons8.com/color/47/000000/c-plus-plus-logo.png"><div class="skillbox mx-3"><div class="skills c"></div></div></div>
-                                <div class="d-flex align-items-center"><img data-content="Java" rel="popover" data-placement="left" data-trigger="hover" src="https://img.icons8.com/color/47/000000/java-coffee-cup-logo.png"><div class="skillbox mx-3"><div class="skills java"></div></div></div>
-                                <div class="d-flex align-items-center"><img data-content="HTML" rel="popover" data-placement="left" data-trigger="hover" src="https://img.icons8.com/color/47/000000/html-5.png"><div class="skillbox mx-3"><div class="skills html"></div></div></div>
-                                <div class="d-flex align-items-center"><img data-content="CSS" rel="popover" data-placement="left" data-trigger="hover" src="https://img.icons8.com/color/47/000000/css3.png"><div class="skillbox mx-3"><div class="skills css"></div></div></div>
-                                <div class="d-flex align-items-center"><img data-content="JavaScript" rel="popover" data-placement="left" data-trigger="hover" src="https://img.icons8.com/color/47/000000/javascript.png"><div class="skillbox mx-3"><div class="skills javascript"></div></div></div>
-                            </div>
-                            <div class="col">
-                                <h3>Tools</h3>
-                                <hr>
-                                <div class="d-flex align-items-center"><img data-content="Git" rel="popover" data-placement="left" data-trigger="hover" src="https://img.icons8.com/color/47/000000/git.png"><div class="skillbox mx-3"><div class="skills git"></div></div></div>
-                                <div class="d-flex align-items-center"><img data-content="Github" rel="popover" data-placement="left" data-trigger="hover" src="https://img.icons8.com/color/47/000000/github.png"><div class="skillbox mx-3"><div class="skills github"></div></div></div>
-                                <div class="d-flex align-items-center"><img data-content="Heroku" rel="popover" data-placement="left" data-trigger="hover" src="https://img.icons8.com/color/47/000000/heroku.png"><div class="skillbox mx-3"><div class="skills heroku"></div></div></div>
-                                <div class="d-flex align-items-center"><img data-content="Firebase" rel="popover" data-placement="left" data-trigger="hover" src="https://img.icons8.com/color/47/000000/firebase.png"><div class="skillbox mx-3"><div class="skills firebase"></div></div></div>
-                            </div>
-                        </div>
-                        <p class="text-center mt-2">You can hover over the <a class="font-weight-bold" style="color: white" href="https://icons8.com/" target="_blank">icons</a> if you're not sure what is it! 😊</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div id="projects" class="d-flex align-items-center">
-            <div class="row">
-                <div class="col-lg-8">
-                    <br>
-                    <h3>Projects I'm Proud Of</h3>
-                    <hr>
-                    <div class="row">
-                        <div class="col">
-                            <div class="card">
-                                <img class="card-img-top" src="/images/scribbles.jpg" alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title font-weight-bold">Scribbles It!</h5>
-                                    <p class="card-text">Featuring a shared, real-time drawing canvas, and a drawing game inspired by "Draw My Thing," Scribbles It! is a fun web app to share with friends! Finalist in Tufts Polyhack 2019.</p></br>
-                                    <a href="https://github.com/jnguyen9763/scribbles-it" target="_blank" class="float-left"><img src="https://img.icons8.com/material-sharp/25/000000/github.png"></a>
-                                    <a href="https://scribbles-it.herokuapp.com/" target="_blank" class="float-right"><img src="https://img.icons8.com/material-sharp/25/000000/external-link.png"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col">
-                            <div class="card">
-                                <img class="card-img-top" src="/images/jammit.jpg" alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title font-weight-bold">God Jammit!</h5>
-                                    <p class="card-text">With God Jammit!, you can now jam with friends online with a connected MIDI instrument or your keyboard! Features dynamic jamming rooms with the ability to record and save your tunes.</p>
-                                    <a href="https://god-jammit.herokuapp.com/" target="_blank" class="float-right"><img src="https://img.icons8.com/material-sharp/25/000000/external-link.png"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <br>
-                    <h3>In Progress</h3>
-                    <hr>
-                    <div class="row">
-                        <div class="col">
-                            <div class="card">
-                                <img class="card-img-top" src="/images/prodiv.jpg" alt="Card image cap">
-                                <div class="card-body">
-                                    <h5 class="card-title font-weight-bold">Prodiv</h5>
-                                    <p class="card-text">Ever since freshman year, I wanted to make a web app that allows you to customize a dashboard with helpful widgets to keep you organized and productive. I'm planning to also learn React through this project. 😄</p>
-                                    <a href="https://github.com/jnguyen9763/Prodiv" target="_blank" class="float-left"><img src="https://img.icons8.com/material-sharp/25/000000/github.png"></a>
-                                    <a href="https://prodiv.herokuapp.com" target="_blank" class="float-right"><img src="https://img.icons8.com/material-sharp/25/000000/external-link.png"></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-       
-        <div id="contact" class="d-flex align-items-center justify-content-center">
-            <h1><a href="mailto:jacqueline.nguyen@tufts.edu" target="_blank">Get in touch <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
-                width="48" height="48"
-                viewBox="0 0 172 172"
-                style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#ffffff"><path d="M16.60517,74.046l28.53767,28.53767c2.82367,2.82367 7.32433,3.03867 10.39883,0.50167l76.3465,-62.96633l-62.96633,76.33933c-2.537,3.0745 -2.322,7.58233 0.50167,10.39883l28.53767,28.53767c4.00617,4.00617 10.8145,2.494 12.7495,-2.83083l46.483,-127.83183c2.24317,-6.17767 -3.741,-12.169 -9.91867,-9.91867l-127.839,46.483c-5.32483,1.935 -6.837,8.74333 -2.83083,12.7495z"></path></g></g></svg></a></h1>
-        </div>
-    </div>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    <script src="/scripts/animation.js" type="text/javascript"></script>
-</body>
+		<div id="projects">
+			<h1>Projects</h1>
+			<div class="proj-desc">
+				<div class="proj-img">
+					<img
+						class="lazyload"
+						data-src="/assets/images/projects/dashboard.jpg"
+						alt="Dashboard project"
+					/>
+					<div
+						onclick="window.open('https://jnguyen9763.github.io/dashboard/',
+						'_blank');"
+					></div>
+				</div>
+				<div class="desc">
+					<div class="desc-head sky-blue">
+						<h2>Dashboard</h2>
+						<p>React</p>
+					</div>
+					<div>
+						<div>
+							Ever since freshman year, I wanted to make a web app that allows
+							you to customize a dashboard with helpful widgets to keep you
+							organized and productive. Using this opportunity to learn React, I
+							finally brought my idea to life!
+						</div>
+						<div class="divider"></div>
+						<div class="features">
+							<div>
+								<p>Features:</p>
+								<ul>
+									<li>Flexible drag-and-drop layout</li>
+									<li>Choose from 12 different widgets</li>
+									<li>Customizable widget settings</li>
+								</ul>
+							</div>
+							<div>
+								<a
+									href="https://github.com/jnguyen9763/dashboard"
+									target="_blank"
+									rel="noopener noreferrer"
+									aria-label="Dashboard GitHub"
+									><span>
+										<i class="fab fa-github"> </i>
+									</span>
+								</a>
+								<a
+									href="https://jnguyen9763.github.io/dashboard/"
+									target="_blank"
+									rel="noopener noreferrer"
+									aria-label="Dashboard"
+								>
+									<span>
+										<i class="fas fa-external-link-alt"> </i>
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="proj-desc">
+				<div class="proj-img">
+					<img
+						class="lazyload"
+						data-src="/assets/images/projects/scribbles.jpg"
+						alt="Scribbles It! project"
+					/>
+					<div
+						onclick="window.open('https://scribbles-it.herokuapp.com/',
+						'_blank');"
+					></div>
+				</div>
+				<div class="desc">
+					<div class="desc-head indian-red">
+						<h2>Scribbles It!</h2>
+						<p>HTML, CSS, JavaScript, Node.js, Heroku</p>
+					</div>
+					<div>
+						<div>
+							Featuring a shared, real-time drawing canvas, and a drawing game
+							inspired by "Draw My Thing," Scribbles It! is a fun web app to
+							share with friends! Finalist in Tufts Polyhack 2019.
+						</div>
+						<div class="divider"></div>
+						<div class="features">
+							<div>
+								<p>Features:</p>
+								<ul>
+									<li>
+										2-in-1 app: collaborative painting & guessing game
+									</li>
+									<li>Real-time drawing</li>
+									<li>Chat room feature</li>
+								</ul>
+							</div>
+							<div>
+								<a
+									href="https://github.com/jnguyen9763/scribbles-it"
+									target="_blank"
+									rel="noopener noreferrer"
+									aria-label="Scribbles It! GitHub"
+									><span>
+										<i class="fab fa-github"> </i>
+									</span>
+								</a>
+								<a
+									href="https://scribbles-it.herokuapp.com/"
+									target="_blank"
+									rel="noopener noreferrer"
+									aria-label="Scribbles It!"
+								>
+									<span>
+										<i class="fas fa-external-link-alt"> </i>
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="proj-desc">
+				<div class="proj-img">
+					<img
+						class="lazyload"
+						data-src="/assets/images/projects/jammit.jpg"
+						alt="God Jammit! project"
+					/>
+					<div
+						onclick="window.open('https://god-jammit.herokuapp.com/',
+						'_blank');"
+					></div>
+				</div>
+				<div class="desc">
+					<div class="desc-head silver">
+						<h2>God Jammit!</h2>
+						<p>HTML, CSS, JavaScript, Node.js, Firebase, Heroku</p>
+					</div>
+					<div>
+						<div>
+							With God Jammit!, you can now jam with friends online with a
+							connected MIDI instrument or your keyboard! Features dynamic
+							jamming rooms with the ability to record and save your tunes.
+						</div>
+						<div class="divider"></div>
+						<div class="features">
+							<div>
+								<p>Features:</p>
+								<ul>
+									<li>Jam with your MIDI instrument or keyboard</li>
+									<li>Dynamic jamming rooms</li>
+									<li>Record and store your jams</li>
+								</ul>
+							</div>
+							<div>
+								<a
+									href="https://god-jammit.herokuapp.com/"
+									target="_blank"
+									rel="noopener noreferrer"
+									aria-label="God Jammmit!"
+								>
+									<span>
+										<i class="fas fa-external-link-alt"> </i>
+									</span>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="contact">
+			<div>
+				<div>
+					<h1>Want to chat?</h1>
+					<p>Send me mail!</p>
+					<a href="mailto:jacqueline.nguyen@tufts.edu">Get in touch</a>
+				</div>
+				<div class="divider"></div>
+				<div>
+					<a
+						href="/assets/files/Jacqueline-Nguyen-resume.pdf"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<div class="icon">
+							<i class="far fa-file-alt"></i>
+						</div>
+						resume
+					</a>
+					<a
+						href="https://github.com/jnguyen9763"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<div class="icon">
+							<i class="fab fa-github"></i>
+						</div>
+						github.com/jnguyen9763
+					</a>
+					<a
+						href="https://www.linkedin.com/in/jacquelinejnguyen/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						<div class="icon">
+							<i class="fab fa-linkedin-in"></i>
+						</div>
+						linkedin.com/in/jacquelinejnguyen
+					</a>
+				</div>
+			</div>
+			<a href="#top">
+				<img src="/assets/images/website/up-arrows.svg" alt="return to top" />
+			</a>
+		</div>
+		<script
+			src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+			integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+			integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+			crossorigin="anonymous"
+		></script>
+		<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+			integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+			crossorigin="anonymous"
+		></script>
+		<script
+			rel="dns-prefetch"
+			src="https://kit.fontawesome.com/7fdae2a3f5.js"
+			crossorigin="anonymous"
+		></script>
+		<script src="/scripts/lazysizes.min.js" async=""></script>
+		<script src="/scripts/petals.js"></script>
+		<script src="/scripts/index.js"></script>
+	</body>
 </html>
