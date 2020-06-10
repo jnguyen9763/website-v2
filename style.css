@@ -611,21 +611,8 @@ nav {
 	#contact > div {
 		width: 90%;
 	}
-}
-
-@media (max-width: 360px) {
 	#contact > div > div:last-child a {
-		padding: 0 0.5rem;
-	}
-}
-
-@media (max-width: 350px) {
-	#contact > div > div:last-child a {
-		margin: 0.5rem 0;
-		padding: 0;
-	}
-	.icon {
-		margin-left: 0.25rem;
+		font-size: 0.75rem;
 	}
 }
 
