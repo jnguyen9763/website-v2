@@ -20,8 +20,8 @@ function petalsAnimation() {
 	const petals = new Array(NUM_PETALS);
 	const fallen = new Array(NUM_PETALS);
 	function init() {
-		petal.src = '../assets/images/animation/petal.svg';
-		flower.src = '../assets/images/animation/flower.svg';
+		petal.src = 'assets/images/animation/petal.svg';
+		flower.src = 'assets/images/animation/flower.svg';
 		for (let i = 0; i < NUM_PETALS; i++) {
 			if (randomInteger(0, FLOWER_CHANCE) === 0) petals[i] = new Flower();
 			else petals[i] = new Petal();
