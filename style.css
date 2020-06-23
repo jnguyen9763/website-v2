@@ -284,14 +284,10 @@ nav {
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 }
-.sky-blue {
-	background-color: #87cefa;
-}
-.indian-red {
-	background-color: #cd5c5c;
-}
-.silver {
-	background-color: #c0c0c0;
+.header {
+	background-color: #303030;
+	color: #ffffff;
+	box-shadow: 2px 4px -1px #000000;
 }
 .divider {
 	position: absolute;
