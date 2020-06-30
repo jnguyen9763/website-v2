@@ -12,5 +12,5 @@ Updates from v1:
 - Sticky navbar
 - Overall aesthetics
 
-Some design aspects were inspired by Brittany Chiang's websites (her github: https://github.com/bchiang7/)
+Some design aspects were inspired by Brittany Chiang's websites (her github: https://github.com/bchiang7/)  
 Otherwise, all of the coding was done by me! (besides some code that is cited)
