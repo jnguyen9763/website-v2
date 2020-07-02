@@ -314,7 +314,7 @@ nav {
 /* contact */
 #contact {
 	height: 100%;
-	background-color: rgb(255, 182, 193, 0.75);
+	background-color: rgba(255, 182, 193, 0.75);
 	display: flex;
 	position: relative;
 	justify-content: center;
@@ -392,6 +392,14 @@ nav {
 #contact .divider {
 	position: relative;
 	top: 7.5%;
+}
+footer {
+	text-align: center;
+	background-color: rgba(255, 182, 193, 0.75);
+	padding: .5rem 0;
+}
+footer p {
+	font-size: .75rem;
 }
 /* Large devices (desktops, less than 1200px) */
 @media (max-width: 1199.98px) {
