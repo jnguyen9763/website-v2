@@ -1,483 +1,367 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<script
-			async
-			src="https://www.googletagmanager.com/gtag/js?id=UA-149327818-1"
-		></script>
-		<script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag() {
-				dataLayer.push(arguments);
-			}
-			gtag('js', new Date());
 
-			gtag('config', 'UA-149327818-1');
-		</script>
-		<!-- Google Tag Manager -->
-		<script>
-			(function (w, d, s, l, i) {
-				w[l] = w[l] || [];
-				w[l].push({
-					'gtm.start': new Date().getTime(),
-					event: 'gtm.js',
-				});
-				var f = d.getElementsByTagName(s)[0],
-					j = d.createElement(s),
-					dl = l != 'dataLayer' ? '&l=' + l : '';
-				j.async = true;
-				j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
-				f.parentNode.insertBefore(j, f);
-			})(window, document, 'script', 'dataLayer', 'GTM-N9SH964');
-		</script>
-		<!-- End Google Tag Manager -->
-		<meta charset="UTF-8" />
-		<meta
-			name="viewport"
-			content="width=device-width, initial-scale=1, shrink-to-fit=no"
-		/>
-		<meta name="author" content="Jacqueline Nguyen" />
-		<meta
-			name="description"
-			content="Jacqueline Nguyen is a student at Tufts University (Class of 2021) studying Computer Science. Eager to acquire leadership skills and experience in a professional workplace. Fast-learner, hardworking, and excited to make a difference with technology."
-		/>
-		<title>Jacqueline Nguyen</title>
-		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-		<link
-			rel="preload"
-			href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap"
-			as="style"
-		/>
-		<link rel="preload" href="style.css" as="style" />
-		<link
-			href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body>
-		<!-- Google Tag Manager (noscript) -->
-		<noscript
-			><iframe
-				src="https://www.googletagmanager.com/ns.html?id=GTM-N9SH964"
-				height="0"
-				width="0"
-				style="display: none; visibility: hidden;"
-			></iframe
-		></noscript>
-		<!-- End Google Tag Manager (noscript) -->
-		<canvas></canvas>
-		<div id="top">
-			<div id="name-animation">
-				<h1 id="first-init">J</h1>
-				<h1 id="first-name" class="hidden">ACQUELINE</h1>
-				<h1 id="last-name">N<span>.</span></h1>
-			</div>
-			<a href="#about"
-				>Get to know me.
-				<p>
-					<img
-						src="assets/images/website/down-arrow.svg"
-						alt="down arrow"
-					/>
-				</p>
-			</a>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-149327818-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-149327818-1');
+	</script>
+	<!-- Google Tag Manager -->
+	<script>
+		(function (w, d, s, l, i) {
+			w[l] = w[l] || [];
+			w[l].push({
+				'gtm.start': new Date().getTime(),
+				event: 'gtm.js',
+			});
+			var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s),
+				dl = l != 'dataLayer' ? '&l=' + l : '';
+			j.async = true;
+			j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+			f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-N9SH964');
+	</script>
+	<!-- End Google Tag Manager -->
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	<meta name="author" content="Jacqueline Nguyen" />
+	<meta name="description"
+		content="Jacqueline Nguyen is a student at Tufts University (Class of 2021) studying Computer Science. Eager to acquire leadership skills and experience in a professional workplace. Fast-learner, hardworking, and excited to make a difference with technology." />
+	<title>Jacqueline Nguyen</title>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+	<link rel="preload" href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap" as="style" />
+	<link rel="preload" href="style.css" as="style" />
+	<link href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N9SH964" height="0" width="0"
+			style="display: none; visibility: hidden;"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<canvas></canvas>
+	<div id="top">
+		<div id="name-animation">
+			<h1 id="first-init">J</h1>
+			<h1 id="first-name" class="hidden">ACQUELINE</h1>
+			<h1 id="last-name">N<span>.</span></h1>
 		</div>
+		<a href="#about">Get to know me.
+			<p>
+				<img src="assets/images/website/down-arrow.svg" alt="down arrow" />
+			</p>
+		</a>
+	</div>
 
-		<nav>
-			<div id="closed-nav">
-				<div>
-					<div>
-						<a href="#about">about</a>
-						<a href="#projects">projects</a>
-					</div>
-					<a id="logo" href="/">
-						<img src="assets/images/website/logo.png" alt="logo" />
-					</a>
-					<div>
-						<a href="#contact">contact</a>
-						<a
-							href="assets/files/Jacqueline-Nguyen-resume.pdf"
-							target="_blank"
-							rel="noopener noreferrer"
-							>resume</a
-						>
-					</div>
-				</div>
-				<a
-					id="mobile-nav"
-					href="javascript:void(0);"
-					onclick="openNav()"
-				>
-					<img
-						src="assets/images/website/hamburger.svg"
-						alt="navigation"
-					/>
-				</a>
-			</div>
-			<div id="open-nav">
-				<a href="#about">about</a>
-				<a href="#projects">projects</a>
-				<a href="#contact">contact</a>
-				<a
-					href="assets/files/Jacqueline-Nguyen-resume.pdf"
-					target="_blank"
-					rel="noopener noreferrer"
-					>resume</a
-				>
-			</div>
-		</nav>
-
-		<div id="about">
-			<div id="description">
-				<div>
-					<h2>About</h2>
-					<p>Hello, my name is Jacqueline Nguyen!</p>
-					<p>
-						I am a Boston native, currently studying Computer
-						Science at Tufts University (Class of 2021). Right now,
-						I am extremely interested in web development, especially
-						the full-stack path.
-					</p>
-					<p>
-						This upcoming fall (2020), I will be a front-end
-						software engineering intern at HubSpot. I've also had
-						experience as a teaching assistant at Tufts for our web
-						development and data structures courses.
-					</p>
-					<p>Here are some things I've worked with:</p>
-					<div>
-						<ul>
-							<li>HTML & CSS</li>
-							<li>JavaScript (ES6)</li>
-							<li>Node.js</li>
-							<li>React</li>
-						</ul>
-						<ul>
-							<li>Java</li>
-							<li>C++</li>
-							<li>Git & GitHub</li>
-							<li>Heroku</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div id="headshot">
-				<img
-					class="lazyload"
-					data-src="assets/images/website/headshot.jpg"
-					alt="headshot"
-				/>
-			</div>
-		</div>
-
-		<div id="projects">
-			<h1>Projects</h1>
-			<div class="proj-desc">
-				<div class="proj-img">
-					<img
-						class="lazyload"
-						data-src="assets/images/projects/vsc.jpg"
-						alt="Tufts VSC website"
-					/>
-					<div
-						onclick="window.open('https://jnguyen9763.github.io/vsc-website/',
-						'_blank');"
-					></div>
-				</div>
-				<div class="desc">
-					<div class="desc-head header">
-						<h2>Tufts Vietnamese Students Club Website</h2>
-						<p>HTML, CSS, JavaScript</p>
-					</div>
-					<div>
-						<div>
-							With university clubs migrating online due to the
-							pandemic, I decided to create a website for my
-							culture club to streamline sharing relevant
-							information to newcomers. I focused on design and
-							adding animations to give it character.
-						</div>
-						<div class="divider"></div>
-						<div class="features">
-							<div>
-								<p>Features:</p>
-								<ul>
-									<li>Fully responsive</li>
-									<li>
-										Email list sign-up form
-									</li>
-									<li>Photo gallery</li>
-								</ul>
-							</div>
-							<div>
-								<a
-									href="https://github.com/jnguyen9763/vsc-website"
-									target="_blank"
-									rel="noopener noreferrer"
-									aria-label="Dashboard GitHub"
-									><span>
-										<i class="fab fa-github"> </i>
-									</span>
-								</a>
-								<a
-									href="https://jnguyen9763.github.io/vsc-website/"
-									target="_blank"
-									rel="noopener noreferrer"
-									aria-label="Dashboard"
-								>
-									<span>
-										<i class="fas fa-external-link-alt">
-										</i>
-									</span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="proj-desc">
-				<div class="proj-img">
-					<img
-						class="lazyload"
-						data-src="assets/images/projects/dashboard.jpg"
-						alt="Dashboard project"
-					/>
-					<div
-						onclick="window.open('https://jnguyen9763.github.io/dashboard/',
-						'_blank');"
-					></div>
-				</div>
-				<div class="desc">
-					<div class="desc-head header">
-						<h2>Dashboard</h2>
-						<p>React</p>
-					</div>
-					<div>
-						<div>
-							Ever since freshman year, I wanted to make a web app
-							that allows you to customize a dashboard with
-							helpful widgets to keep you organized and
-							productive. Using this opportunity to learn React, I
-							finally brought my idea to life!
-						</div>
-						<div class="divider"></div>
-						<div class="features">
-							<div>
-								<p>Features:</p>
-								<ul>
-									<li>Flexible drag-and-drop layout</li>
-									<li>Choose from 12 different widgets</li>
-									<li>Customizable widget settings</li>
-								</ul>
-							</div>
-							<div>
-								<a
-									href="https://github.com/jnguyen9763/dashboard"
-									target="_blank"
-									rel="noopener noreferrer"
-									aria-label="Dashboard GitHub"
-									><span>
-										<i class="fab fa-github"> </i>
-									</span>
-								</a>
-								<a
-									href="https://jnguyen9763.github.io/dashboard/"
-									target="_blank"
-									rel="noopener noreferrer"
-									aria-label="Dashboard"
-								>
-									<span>
-										<i class="fas fa-external-link-alt">
-										</i>
-									</span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="proj-desc">
-				<div class="proj-img">
-					<img
-						class="lazyload"
-						data-src="assets/images/projects/scribbles.jpg"
-						alt="Scribbles It! project"
-					/>
-					<div
-						onclick="window.open('https://scribbles-it.herokuapp.com/',
-						'_blank');"
-					></div>
-				</div>
-				<div class="desc">
-					<div class="desc-head header">
-						<h2>Scribbles It!</h2>
-						<p>HTML, CSS, JavaScript, Node.js, Heroku</p>
-					</div>
-					<div>
-						<div>
-							Featuring a shared, real-time drawing canvas, and a
-							drawing game inspired by "Draw My Thing," Scribbles
-							It! is a fun web app to share with friends! Finalist
-							in Tufts Polyhack 2019.
-						</div>
-						<div class="divider"></div>
-						<div class="features">
-							<div>
-								<p>Features:</p>
-								<ul>
-									<li>
-										2-in-1 app: collaborative painting &
-										guessing game
-									</li>
-									<li>Real-time drawing</li>
-									<li>Chat room feature</li>
-								</ul>
-							</div>
-							<div>
-								<a
-									href="https://github.com/jnguyen9763/scribbles-it"
-									target="_blank"
-									rel="noopener noreferrer"
-									aria-label="Scribbles It! GitHub"
-									><span>
-										<i class="fab fa-github"> </i>
-									</span>
-								</a>
-								<a
-									href="https://scribbles-it.herokuapp.com/"
-									target="_blank"
-									rel="noopener noreferrer"
-									aria-label="Scribbles It!"
-								>
-									<span>
-										<i class="fas fa-external-link-alt">
-										</i>
-									</span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="proj-desc">
-				<div class="proj-img">
-					<img
-						class="lazyload"
-						data-src="assets/images/projects/jammit.jpg"
-						alt="God Jammit! project"
-					/>
-					<div
-						onclick="window.open('https://god-jammit.herokuapp.com/',
-						'_blank');"
-					></div>
-				</div>
-				<div class="desc">
-					<div class="desc-head header">
-						<h2>God Jammit!</h2>
-						<p>HTML, CSS, JavaScript, Node.js, Firebase, Heroku</p>
-					</div>
-					<div>
-						<div>
-							With God Jammit!, you can now jam with friends
-							online with a connected MIDI instrument or your
-							keyboard! Features dynamic jamming rooms with the
-							ability to record and save your tunes.
-						</div>
-						<div class="divider"></div>
-						<div class="features">
-							<div>
-								<p>Features:</p>
-								<ul>
-									<li>
-										Jam with your MIDI instrument or
-										keyboard
-									</li>
-									<li>Dynamic jamming rooms</li>
-									<li>Record and store your jams</li>
-								</ul>
-							</div>
-							<div>
-								<a
-									href="https://god-jammit.herokuapp.com/"
-									target="_blank"
-									rel="noopener noreferrer"
-									aria-label="God Jammmit!"
-								>
-									<span>
-										<i class="fas fa-external-link-alt">
-										</i>
-									</span>
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div id="contact">
+	<nav>
+		<div id="closed-nav">
 			<div>
 				<div>
-					<h1>Want to chat?</h1>
-					<p>Send me mail!</p>
-					<a href="mailto:jacqueline.nguyen@tufts.edu"
-						>Get in touch</a
-					>
+					<a href="#about">about</a>
+					<a href="#projects">projects</a>
 				</div>
-				<div class="divider"></div>
+				<a id="logo" href="/">
+					<img src="assets/images/website/logo.png" alt="logo" />
+				</a>
 				<div>
-					<a
-						href="assets/files/Jacqueline-Nguyen-resume.pdf"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<div class="icon">
-							<i class="far fa-file-alt"></i>
-						</div>
-						resume
-					</a>
-					<a
-						href="https://github.com/jnguyen9763"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<div class="icon">
-							<i class="fab fa-github"></i>
-						</div>
-						github.com/jnguyen9763
-					</a>
-					<a
-						href="https://www.linkedin.com/in/jacquelinejnguyen/"
-						target="_blank"
-						rel="noopener noreferrer"
-					>
-						<div class="icon">
-							<i class="fab fa-linkedin-in"></i>
-						</div>
-						linkedin.com/in/jacquelinejnguyen
-					</a>
+					<a href="#contact">contact</a>
+					<a href="assets/files/Jacqueline-Nguyen-resume.pdf" target="_blank" rel="noopener noreferrer">resume</a>
 				</div>
 			</div>
-			<a href="#top">
-				<img
-					src="assets/images/website/up-arrows.svg"
-					alt="return to top"
-				/>
+			<a id="mobile-nav" href="javascript:void(0);" onclick="openNav()">
+				<img src="assets/images/website/hamburger.svg" alt="navigation" />
 			</a>
 		</div>
-		<footer>
-			<p>Last updated: July 2020</p>
-		</footer>
-		<script
-			rel="dns-prefetch"
-			src="https://kit.fontawesome.com/7fdae2a3f5.js"
-			crossorigin="anonymous"
-		></script>
-		<script src="scripts/petals.js"></script>
-		<script src="scripts/index.js"></script>
-		<script src="scripts/lazysizes.min.js" async=""></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-		<script src="scripts/scrolling.js"></script>
-	</body>
+		<div id="open-nav">
+			<a href="#about">about</a>
+			<a href="#projects">projects</a>
+			<a href="#contact">contact</a>
+			<a href="assets/files/Jacqueline-Nguyen-resume.pdf" target="_blank" rel="noopener noreferrer">resume</a>
+		</div>
+	</nav>
+
+	<div id="about">
+		<div id="description">
+			<div>
+				<h2>About</h2>
+				<p>Hello, my name is Jacqueline Nguyen!</p>
+				<p>
+					I am a Boston native, currently studying Computer
+					Science at Tufts University (Class of 2021). Right now,
+					I am extremely interested in web development, especially
+					the full-stack path.
+				</p>
+				<p>
+					This upcoming fall (2020), I will be a front-end
+					software engineering intern at HubSpot. I've also had
+					experience as a teaching assistant at Tufts for our web
+					development and data structures courses.
+				</p>
+				<p>Here are some things I've worked with:</p>
+				<div>
+					<ul>
+						<li>HTML & CSS</li>
+						<li>JavaScript (ES6)</li>
+						<li>Node.js</li>
+						<li>React</li>
+					</ul>
+					<ul>
+						<li>Java</li>
+						<li>C++</li>
+						<li>Git & GitHub</li>
+						<li>Heroku</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="headshot">
+			<img class="lazyload" data-src="assets/images/website/headshot.jpg" alt="headshot" />
+		</div>
+	</div>
+
+	<div id="projects">
+		<h1>Projects</h1>
+		<div class="proj-desc">
+			<div class="proj-img">
+				<img class="lazyload" data-src="assets/images/projects/vsc.jpg" alt="Tufts VSC website" />
+				<div onclick="window.open('https://jnguyen9763.github.io/vsc-website/',
+						'_blank');"></div>
+			</div>
+			<div class="desc">
+				<div class="desc-head header">
+					<h2>Tufts Vietnamese Students Club Website</h2>
+					<p>HTML, CSS, JavaScript</p>
+				</div>
+				<div>
+					<div>
+						With university clubs migrating online due to the
+						pandemic, I decided to create a website for my
+						culture club to streamline sharing relevant
+						information to newcomers. I focused on design and
+						adding animations to give it character.
+					</div>
+					<div class="divider"></div>
+					<div class="features">
+						<div>
+							<p>Features:</p>
+							<ul>
+								<li>Fully responsive</li>
+								<li>
+									Email list sign-up form
+								</li>
+								<li>Photo gallery</li>
+							</ul>
+						</div>
+						<div>
+							<a href="https://github.com/jnguyen9763/vsc-website" target="_blank" rel="noopener noreferrer"
+								aria-label="Dashboard GitHub"><span>
+									<i class="fab fa-github"> </i>
+								</span>
+							</a>
+							<a href="https://jnguyen9763.github.io/vsc-website/" target="_blank" rel="noopener noreferrer"
+								aria-label="Dashboard">
+								<span>
+									<i class="fas fa-external-link-alt">
+									</i>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="proj-desc">
+			<div class="proj-img">
+				<img class="lazyload" data-src="assets/images/projects/dashboard.jpg" alt="Dashboard project" />
+				<div onclick="window.open('https://jnguyen9763.github.io/dashboard/',
+						'_blank');"></div>
+			</div>
+			<div class="desc">
+				<div class="desc-head header">
+					<h2>Dashboard</h2>
+					<p>React</p>
+				</div>
+				<div>
+					<div>
+						Ever since freshman year, I wanted to make a web app
+						that allows you to customize a dashboard with
+						helpful widgets to keep you organized and
+						productive. Using this opportunity to learn React, I
+						finally brought my idea to life!
+					</div>
+					<div class="divider"></div>
+					<div class="features">
+						<div>
+							<p>Features:</p>
+							<ul>
+								<li>Flexible drag-and-drop layout</li>
+								<li>Choose from 12 different widgets</li>
+								<li>Customizable widget settings</li>
+							</ul>
+						</div>
+						<div>
+							<a href="https://github.com/jnguyen9763/dashboard" target="_blank" rel="noopener noreferrer"
+								aria-label="Dashboard GitHub"><span>
+									<i class="fab fa-github"> </i>
+								</span>
+							</a>
+							<a href="https://jnguyen9763.github.io/dashboard/" target="_blank" rel="noopener noreferrer"
+								aria-label="Dashboard">
+								<span>
+									<i class="fas fa-external-link-alt">
+									</i>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="proj-desc">
+			<div class="proj-img">
+				<img class="lazyload" data-src="assets/images/projects/scribbles.jpg" alt="Scribbles It! project" />
+				<div onclick="window.open('https://scribbles-it.herokuapp.com/',
+						'_blank');"></div>
+			</div>
+			<div class="desc">
+				<div class="desc-head header">
+					<h2>Scribbles It!</h2>
+					<p>HTML, CSS, JavaScript, Node.js, Heroku</p>
+				</div>
+				<div>
+					<div>
+						Featuring a shared, real-time drawing canvas, and a
+						drawing game inspired by "Draw My Thing," Scribbles
+						It! is a fun web app to share with friends! Finalist
+						in Tufts Polyhack 2019.
+					</div>
+					<div class="divider"></div>
+					<div class="features">
+						<div>
+							<p>Features:</p>
+							<ul>
+								<li>
+									2-in-1 app: collaborative painting &
+									guessing game
+								</li>
+								<li>Real-time drawing</li>
+								<li>Chat room feature</li>
+							</ul>
+						</div>
+						<div>
+							<a href="https://github.com/jnguyen9763/scribbles-it" target="_blank" rel="noopener noreferrer"
+								aria-label="Scribbles It! GitHub"><span>
+									<i class="fab fa-github"> </i>
+								</span>
+							</a>
+							<a href="https://scribbles-it.herokuapp.com/" target="_blank" rel="noopener noreferrer"
+								aria-label="Scribbles It!">
+								<span>
+									<i class="fas fa-external-link-alt">
+									</i>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="proj-desc">
+			<div class="proj-img">
+				<img class="lazyload" data-src="assets/images/projects/jammit.jpg" alt="God Jammit! project" />
+				<div onclick="window.open('https://god-jammit.herokuapp.com/',
+						'_blank');"></div>
+			</div>
+			<div class="desc">
+				<div class="desc-head header">
+					<h2>God Jammit!</h2>
+					<p>HTML, CSS, JavaScript, Node.js, Firebase, Heroku</p>
+				</div>
+				<div>
+					<div>
+						With God Jammit!, you can now jam with friends
+						online with a connected MIDI instrument or your
+						keyboard! Features dynamic jamming rooms with the
+						ability to record and save your tunes.
+					</div>
+					<div class="divider"></div>
+					<div class="features">
+						<div>
+							<p>Features:</p>
+							<ul>
+								<li>
+									Jam with your MIDI instrument or
+									keyboard
+								</li>
+								<li>Dynamic jamming rooms</li>
+								<li>Record and store your jams</li>
+							</ul>
+						</div>
+						<div>
+							<a href="https://god-jammit.herokuapp.com/" target="_blank" rel="noopener noreferrer"
+								aria-label="God Jammmit!">
+								<span>
+									<i class="fas fa-external-link-alt">
+									</i>
+								</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="contact">
+		<div>
+			<div>
+				<h1>Want to chat?</h1>
+				<p>Send me mail!</p>
+				<a href="mailto:jacqueline.nguyen@tufts.edu">Get in touch</a>
+			</div>
+			<div class="divider"></div>
+			<div>
+				<a href="assets/files/Jacqueline-Nguyen-resume.pdf" target="_blank" rel="noopener noreferrer">
+					<div class="icon">
+						<i class="far fa-file-alt"></i>
+					</div>
+					resume
+				</a>
+				<a href="https://github.com/jnguyen9763" target="_blank" rel="noopener noreferrer">
+					<div class="icon">
+						<i class="fab fa-github"></i>
+					</div>
+					github.com/jnguyen9763
+				</a>
+				<a href="https://www.linkedin.com/in/jacquelinejnguyen/" target="_blank" rel="noopener noreferrer">
+					<div class="icon">
+						<i class="fab fa-linkedin-in"></i>
+					</div>
+					linkedin.com/in/jacquelinejnguyen
+				</a>
+			</div>
+		</div>
+		<a href="#top">
+			<img src="assets/images/website/up-arrows.svg" alt="return to top" />
+		</a>
+	</div>
+	<footer>
+		<p>Last updated: July 2020</p>
+	</footer>
+	<script rel="dns-prefetch" src="https://kit.fontawesome.com/7fdae2a3f5.js" crossorigin="anonymous"></script>
+	<script src="scripts/petals.js"></script>
+	<script src="scripts/index.js"></script>
+	<script src="scripts/lazysizes.min.js" async=""></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="scripts/scrolling.js"></script>
+</body>
+
 </html>
