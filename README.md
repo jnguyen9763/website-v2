@@ -2,7 +2,7 @@
 
 This is the second version of my personal website: https://jnguyen9763.github.io/website-v2/
 
-![Alt Text](https://github.com/jnguyen9763/jnguyen9763.github.io/blob/master/assets/images/website/demo.gif)
+![Alt Text](https://github.com/jnguyen9763/website-v2/blob/master/assets/images/website/demo.gif)
 
 v1 : https://jnguyen9763.github.io/website-v1
 
