@@ -1,6 +1,6 @@
-# jnguyen9763.github.io
+# website-v2
 
-Hello! This repository is for my personal website: https://jnguyen9763.github.io/
+This is the second version of my personal website: https://jnguyen9763.github.io/website-v2/
 
 ![Alt Text](https://github.com/jnguyen9763/jnguyen9763.github.io/blob/master/assets/images/website/demo.gif)
 
